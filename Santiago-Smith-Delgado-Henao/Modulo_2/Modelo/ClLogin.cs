@@ -20,7 +20,7 @@ namespace Modelo
 
             if (query.Count() > 0)
             {
-                userID = query.First().idUsuario;
+                userID = query.First().idRol;
             }
 
             return userID;

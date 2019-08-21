@@ -22,14 +22,20 @@ namespace Vista
 
             int Login = ClLogin.IniciarSesion(user, pass);
 
-            if(Login == 0)
-            {
-                Response.Write("<script>alert('Usuario Incorrecto')</script>");
-            } else
-            {
-                Response.Redirect("Menu.aspx");
-                Response.Write("<script>alert('Usuario Correcto')</script>");
+                if (Login == 1)
+                {
+                    Response.Write("<script>alert('Usuario Correcto')</script>");
+                    Response.Redirect("Usuario/Menu.aspx");
+                }
+                else if (Login == 2)
+                {
+                    Response.Write("<script>alert('Administrador Correcto')</script>");
+                    Response.Redirect("Admin/MenuAdmin.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Usuario Incorrecto')</script>");
+                }
             }
         }
     }
-}
