@@ -1,6 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menu.aspx.cs" Inherits="Vista.menu" %>
-
-<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VerPersonas.aspx.cs" Inherits="Vista.VerPersonas" %>
 
 <!doctype html>
 <html lang="es">
@@ -11,17 +9,44 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
+
+    <title>Ver Personas</title>
+  </head>
   <body>
-    <nav class="navbar navbar-light bg-light">
+       <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand">Admin</a>
   <form class="form-inline" runat="server">
-      <div style="margin-right: 10px">
-      <asp:Button ID="btnMostrarPersona" runat="server" CssClass="form-control btn btn-danger" Text="Ver Personas" OnClick="btnMostrarPersona_Click" />
-      </div>
        <asp:Button ID="btnCrudPersona" runat="server" CssClass="form-control btn btn-danger" Text="Modificar Personas" OnClick="btnCrudPersona_Click" />
   </form>
 </nav>
+      <div class="container">
+          <div class="row">
+              <div class=" col-md-10   mx-auto " style="margin-top:15%">
+                   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Documento</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo Electronico</th>
+      <th scope="col">Id Usuario</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+        <td>@mdo</td>
+    </tr>
+  </tbody>
+</table>                                               
+              </div>
+          </div>
+      </div>
+
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,24 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Usuarios" Class="EntidadDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-54IKPVH;Initial Catalog=Usuarios;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="UsuariosConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.rol" Member="rol">
-    <Type Name="rol">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.SysUser" Member="SysUser">
-    <Type Name="SysUser">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="users" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="pass" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.persona" Member="persona">
     <Type Name="persona">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="coreo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_persona" Member="Usuario" ThisKey="id_usuario" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rol" Member="rol">
+    <Type Name="rol">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="rol_Usuario" Member="Usuario" ThisKey="id" OtherKey="id_rol" Type="Usuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuario" Member="Usuario">
+    <Type Name="Usuario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="users" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="pass" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="id_rol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuario_persona" Member="persona" ThisKey="id" OtherKey="id_usuario" Type="persona" />
+      <Association Name="rol_Usuario" Member="rol" ThisKey="id_rol" OtherKey="id" Type="rol" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

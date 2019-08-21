@@ -26,9 +26,12 @@ namespace Vista
             if (Login == 0)
             {
                 Response.Write("<script>alert('Usuario Incorrecto')</script>");
-            }else
+            }else if (Login == 1)
             {
                 Response.Redirect("menu.aspx");
+            }else
+            {
+                Response.Redirect("MenuC.aspx");
             }
         }
     }

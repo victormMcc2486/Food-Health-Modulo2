@@ -11,19 +11,20 @@ namespace Modelo
         public static int IniciarSesion(String user, String pass)
         {
             EntidadDataContext context = new EntidadDataContext();
-            int userID = 0;
-            var query = context.SysUser.Where(p => p.users == user && p.pass == pass).Select(p => p);
+            int idRol = 0;
+            var query = context.Usuario.Where(p => p.users == user && p.pass == pass).Select(p => p);
 
-            var query1 = from p in context.SysUser
+            var query1 = from p in context.Usuario
                         where p.users == user && p.pass == pass
                         select p;
 
             if (query.Count() > 0)
             {
-                userID = query.First().id;
+                idRol = query.First().id_rol;
             }
 
-            return userID;
+            return idRol;
         }
     }
 }
+    
