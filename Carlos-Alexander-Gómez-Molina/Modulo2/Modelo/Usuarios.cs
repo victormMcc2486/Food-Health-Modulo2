@@ -29,9 +29,11 @@ namespace Modelo
             var query = from u in context.persona
                         select new
                         {
-                            Documento = u.documento,
                             Nombre = u.nombre,
-                            Correo = u.coreo
+                            Documento = u.documento,
+                            Correo = u.correo,
+                            Direccion = u.direccion,
+                            Telefono = u.telefono
                         };
 
             return query;

@@ -3,11 +3,11 @@
   <Table Name="dbo.persona" Member="persona">
     <Type Name="persona">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="documento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="coreo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Association Name="Usuario_persona" Member="Usuario" ThisKey="id_usuario" OtherKey="id" Type="Usuario" IsForeignKey="true" />
+      <Column Name="correo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="documento" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="telefono" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.rol" Member="rol">
@@ -23,7 +23,6 @@
       <Column Name="users" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="pass" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="id_rol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Usuario_persona" Member="persona" ThisKey="id" OtherKey="id_usuario" Type="persona" />
       <Association Name="rol_Usuario" Member="rol" ThisKey="id_rol" OtherKey="id" Type="rol" IsForeignKey="true" />
     </Type>
   </Table>

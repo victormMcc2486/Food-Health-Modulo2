@@ -104,15 +104,15 @@ namespace Modelo
 		
 		private int _id;
 		
-		private int _documento;
-		
-		private string _coreo;
-		
-		private int _id_usuario;
-		
 		private string _nombre;
 		
-		private EntityRef<Usuario> _Usuario;
+		private string _correo;
+		
+		private string _documento;
+		
+		private string _telefono;
+		
+		private string _direccion;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
@@ -120,19 +120,20 @@ namespace Modelo
     partial void OnCreated();
     partial void OnidChanging(int value);
     partial void OnidChanged();
-    partial void OndocumentoChanging(int value);
-    partial void OndocumentoChanged();
-    partial void OncoreoChanging(string value);
-    partial void OncoreoChanged();
-    partial void Onid_usuarioChanging(int value);
-    partial void Onid_usuarioChanged();
     partial void OnnombreChanging(string value);
     partial void OnnombreChanged();
+    partial void OncorreoChanging(string value);
+    partial void OncorreoChanged();
+    partial void OndocumentoChanging(string value);
+    partial void OndocumentoChanged();
+    partial void OntelefonoChanging(string value);
+    partial void OntelefonoChanged();
+    partial void OndireccionChanging(string value);
+    partial void OndireccionChanged();
     #endregion
 		
 		public persona()
 		{
-			this._Usuario = default(EntityRef<Usuario>);
 			OnCreated();
 		}
 		
@@ -152,70 +153,6 @@ namespace Modelo
 					this._id = value;
 					this.SendPropertyChanged("id");
 					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_documento", DbType="Int NOT NULL")]
-		public int documento
-		{
-			get
-			{
-				return this._documento;
-			}
-			set
-			{
-				if ((this._documento != value))
-				{
-					this.OndocumentoChanging(value);
-					this.SendPropertyChanging();
-					this._documento = value;
-					this.SendPropertyChanged("documento");
-					this.OndocumentoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_coreo", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
-		public string coreo
-		{
-			get
-			{
-				return this._coreo;
-			}
-			set
-			{
-				if ((this._coreo != value))
-				{
-					this.OncoreoChanging(value);
-					this.SendPropertyChanging();
-					this._coreo = value;
-					this.SendPropertyChanged("coreo");
-					this.OncoreoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_usuario", DbType="Int NOT NULL")]
-		public int id_usuario
-		{
-			get
-			{
-				return this._id_usuario;
-			}
-			set
-			{
-				if ((this._id_usuario != value))
-				{
-					if (this._Usuario.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.Onid_usuarioChanging(value);
-					this.SendPropertyChanging();
-					this._id_usuario = value;
-					this.SendPropertyChanged("id_usuario");
-					this.Onid_usuarioChanged();
 				}
 			}
 		}
@@ -240,36 +177,82 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_persona", Storage="_Usuario", ThisKey="id_usuario", OtherKey="id", IsForeignKey=true)]
-		public Usuario Usuario
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_correo", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string correo
 		{
 			get
 			{
-				return this._Usuario.Entity;
+				return this._correo;
 			}
 			set
 			{
-				Usuario previousValue = this._Usuario.Entity;
-				if (((previousValue != value) 
-							|| (this._Usuario.HasLoadedOrAssignedValue == false)))
+				if ((this._correo != value))
 				{
+					this.OncorreoChanging(value);
 					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Usuario.Entity = null;
-						previousValue.persona.Remove(this);
-					}
-					this._Usuario.Entity = value;
-					if ((value != null))
-					{
-						value.persona.Add(this);
-						this._id_usuario = value.id;
-					}
-					else
-					{
-						this._id_usuario = default(int);
-					}
-					this.SendPropertyChanged("Usuario");
+					this._correo = value;
+					this.SendPropertyChanged("correo");
+					this.OncorreoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_documento", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string documento
+		{
+			get
+			{
+				return this._documento;
+			}
+			set
+			{
+				if ((this._documento != value))
+				{
+					this.OndocumentoChanging(value);
+					this.SendPropertyChanging();
+					this._documento = value;
+					this.SendPropertyChanged("documento");
+					this.OndocumentoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_telefono", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string telefono
+		{
+			get
+			{
+				return this._telefono;
+			}
+			set
+			{
+				if ((this._telefono != value))
+				{
+					this.OntelefonoChanging(value);
+					this.SendPropertyChanging();
+					this._telefono = value;
+					this.SendPropertyChanged("telefono");
+					this.OntelefonoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_direccion", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string direccion
+		{
+			get
+			{
+				return this._direccion;
+			}
+			set
+			{
+				if ((this._direccion != value))
+				{
+					this.OndireccionChanging(value);
+					this.SendPropertyChanging();
+					this._direccion = value;
+					this.SendPropertyChanged("direccion");
+					this.OndireccionChanged();
 				}
 			}
 		}
@@ -423,8 +406,6 @@ namespace Modelo
 		
 		private int _id_rol;
 		
-		private EntitySet<persona> _persona;
-		
 		private EntityRef<rol> _rol;
 		
     #region Definiciones de métodos de extensibilidad
@@ -443,7 +424,6 @@ namespace Modelo
 		
 		public Usuario()
 		{
-			this._persona = new EntitySet<persona>(new Action<persona>(this.attach_persona), new Action<persona>(this.detach_persona));
 			this._rol = default(EntityRef<rol>);
 			OnCreated();
 		}
@@ -532,19 +512,6 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Usuario_persona", Storage="_persona", ThisKey="id", OtherKey="id_usuario")]
-		public EntitySet<persona> persona
-		{
-			get
-			{
-				return this._persona;
-			}
-			set
-			{
-				this._persona.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_Usuario", Storage="_rol", ThisKey="id_rol", OtherKey="id", IsForeignKey=true)]
 		public rol rol
 		{
@@ -597,18 +564,6 @@ namespace Modelo
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_persona(persona entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuario = this;
-		}
-		
-		private void detach_persona(persona entity)
-		{
-			this.SendPropertyChanging();
-			entity.Usuario = null;
 		}
 	}
 }

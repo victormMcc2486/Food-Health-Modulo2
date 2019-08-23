@@ -31,7 +31,7 @@
                                     <asp:TextBox ID="txtClave" TextMode="Password" placeholder="Contraseña" CssClass="form-control" runat="server"  ></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Button ID="btnEnviar" CssClass="form-control btn btn-danger" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
+                                    <asp:Button ID="btnEnviar" CssClass="form-control btn btn-primary" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
                                 </div>
                              </form>
                         </p>
