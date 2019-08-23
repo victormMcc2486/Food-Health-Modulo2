@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClLogin.cs" />
+    <Compile Include="ClUsuario.cs" />
     <Compile Include="Entidad.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

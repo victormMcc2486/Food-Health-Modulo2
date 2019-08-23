@@ -112,10 +112,6 @@ namespace Modelo
 		
 		private string _direccion;
 		
-		private int _idUsuario;
-		
-		private EntityRef<usuarios> _usuarios;
-		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -130,13 +126,10 @@ namespace Modelo
     partial void OnnombresChanged();
     partial void OndireccionChanging(string value);
     partial void OndireccionChanged();
-    partial void OnidUsuarioChanging(int value);
-    partial void OnidUsuarioChanged();
     #endregion
 		
 		public personas()
 		{
-			this._usuarios = default(EntityRef<usuarios>);
 			OnCreated();
 		}
 		
@@ -236,64 +229,6 @@ namespace Modelo
 					this._direccion = value;
 					this.SendPropertyChanged("direccion");
 					this.OndireccionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="Int NOT NULL")]
-		public int idUsuario
-		{
-			get
-			{
-				return this._idUsuario;
-			}
-			set
-			{
-				if ((this._idUsuario != value))
-				{
-					if (this._usuarios.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidUsuarioChanging(value);
-					this.SendPropertyChanging();
-					this._idUsuario = value;
-					this.SendPropertyChanged("idUsuario");
-					this.OnidUsuarioChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_personas", Storage="_usuarios", ThisKey="idUsuario", OtherKey="idUsuario", IsForeignKey=true)]
-		public usuarios usuarios
-		{
-			get
-			{
-				return this._usuarios.Entity;
-			}
-			set
-			{
-				usuarios previousValue = this._usuarios.Entity;
-				if (((previousValue != value) 
-							|| (this._usuarios.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._usuarios.Entity = null;
-						previousValue.personas.Remove(this);
-					}
-					this._usuarios.Entity = value;
-					if ((value != null))
-					{
-						value.personas.Add(this);
-						this._idUsuario = value.idUsuario;
-					}
-					else
-					{
-						this._idUsuario = default(int);
-					}
-					this.SendPropertyChanged("usuarios");
 				}
 			}
 		}
@@ -447,8 +382,6 @@ namespace Modelo
 		
 		private int _idRol;
 		
-		private EntitySet<personas> _personas;
-		
 		private EntityRef<roles> _roles;
 		
     #region Definiciones de métodos de extensibilidad
@@ -467,7 +400,6 @@ namespace Modelo
 		
 		public usuarios()
 		{
-			this._personas = new EntitySet<personas>(new Action<personas>(this.attach_personas), new Action<personas>(this.detach_personas));
 			this._roles = default(EntityRef<roles>);
 			OnCreated();
 		}
@@ -556,19 +488,6 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_personas", Storage="_personas", ThisKey="idUsuario", OtherKey="idUsuario")]
-		public EntitySet<personas> personas
-		{
-			get
-			{
-				return this._personas;
-			}
-			set
-			{
-				this._personas.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="roles_usuarios", Storage="_roles", ThisKey="idRol", OtherKey="idRol", IsForeignKey=true)]
 		public roles roles
 		{
@@ -621,18 +540,6 @@ namespace Modelo
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_personas(personas entity)
-		{
-			this.SendPropertyChanging();
-			entity.usuarios = this;
-		}
-		
-		private void detach_personas(personas entity)
-		{
-			this.SendPropertyChanging();
-			entity.usuarios = null;
 		}
 	}
 }

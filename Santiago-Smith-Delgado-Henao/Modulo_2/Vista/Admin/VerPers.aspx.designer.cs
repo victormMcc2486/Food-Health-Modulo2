@@ -58,12 +58,12 @@ namespace Vista.Admin {
         protected global::System.Web.UI.WebControls.LinkButton admin_personas;
         
         /// <summary>
-        /// Control tbl_pers.
+        /// Control gvPersonas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table tbl_pers;
+        protected global::System.Web.UI.WebControls.GridView gvPersonas;
     }
 }
