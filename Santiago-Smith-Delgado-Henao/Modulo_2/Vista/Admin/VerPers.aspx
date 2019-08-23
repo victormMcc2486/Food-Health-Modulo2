@@ -29,10 +29,28 @@
         </div>
         <div style="margin-top:20px;">
             <center><h1>VER PERSONAS</h1></center>
-            <asp:Table ID="tbl_pers" runat="server">
 
-
-            </asp:Table>
+            <div class="table-responsive">
+            <table class="table table-active" style="margin-top:30px;">
+                <tr>
+                    <td><center>
+                        <asp:GridView ID="gvPersonas" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                            <AlternatingRowStyle BackColor="White" />
+                            <EditRowStyle BackColor="#2461BF" />
+                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#EFF3FB" />
+                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                        </asp:GridView></center>
+                    </td>
+                </tr>
+            </table>
+                </div>
         </div>
     </form>
 </body>

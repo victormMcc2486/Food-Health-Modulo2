@@ -7,8 +7,6 @@
       <Column Name="correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="nombres" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="usuarios_personas" Member="usuarios" ThisKey="idUsuario" OtherKey="idUsuario" Type="usuarios" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.roles" Member="roles">
@@ -24,7 +22,6 @@
       <Column Name="usuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="clave" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="usuarios_personas" Member="personas" ThisKey="idUsuario" OtherKey="idUsuario" Type="personas" />
       <Association Name="roles_usuarios" Member="roles" ThisKey="idRol" OtherKey="idRol" Type="roles" IsForeignKey="true" />
     </Type>
   </Table>

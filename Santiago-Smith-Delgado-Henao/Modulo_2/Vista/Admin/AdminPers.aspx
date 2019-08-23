@@ -29,9 +29,46 @@
 </nav>
         </div>
         <div style="margin-top:20px;">
-            <h1>ADMINISTRAR PERSONAS</h1>
-            
+            <center><h1>ADMINISTRAR PERSONAS</h1></center>
+ 
+        </div>
+            <div class="container">
+        <div class="row">
+            <div class="  col-md-6  mx-auto " style="margin-top:3%">
+                <div class="card ">
+                    <div class="card-body ">
+                        <h5 class="card-title">Formulario Persona</h5>
+                        <p class="card-text">
+                            <div class="form-group ">
+                                    <asp:Label ID="Label4" runat="server" Text="Documento:"></asp:Label>  
+                                    <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Documento"></asp:TextBox>
+                                </div>
+                            <div class="form-group">
+                                    <asp:Label ID="Label3" runat="server" Text="Correo:"></asp:Label> 
+                                    <asp:TextBox ID="TextBox1" placeholder="Correo Electronico" CssClass="form-control" runat="server"  ></asp:TextBox>
+                                </div>
+                            <div class="form-group ">
+                                    <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label>  
+                                    <asp:TextBox ID="txtnombre" runat="server" CssClass="form-control" placeholder="Nombre"></asp:TextBox>
+                                </div>
+                            <div class="form-group ">
+                                    <asp:Label ID="Label2" runat="server" Text="Dirección:"></asp:Label>  
+                                    <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" placeholder="Dirección"></asp:TextBox>
+                                </div>
+                                <div class="form-group col-md-3" style="display:inline-flex">
+                                    <asp:Button ID="btnAgregar" CssClass="form-control btn btn-primary" runat="server" Text="Agregar"  />
+                                </div>
+                                <div class="form-group col-md-4 " style="display:inline-flex">
+                                    <asp:Button ID="Button2" CssClass="form-control btn btn-primary" runat="server" Text="Modificar"  />
+                                </div>
+                                <div class="form-group col-md-4" style="display:inline-flex">
+                                    <asp:Button ID="Button6" CssClass="form-control btn btn-primary" runat="server" Text="Deshabilitar"  />
+                                </div>
+                        </p>
+                      </div>
+                </div>
 
+            </div>
         </div>
     </form>
 </body>
