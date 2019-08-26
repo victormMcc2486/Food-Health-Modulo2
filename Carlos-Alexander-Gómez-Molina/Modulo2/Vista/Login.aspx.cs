@@ -29,7 +29,11 @@ namespace Vista
             }else if (Login == 1)
             {
                 Response.Redirect("menu.aspx");
-            }else
+                
+
+                Response.Write("<script>Swal.fire('Any fool can use a computer')</script>");
+            }
+            else
             {
                 Response.Redirect("MenuC.aspx");
             }
