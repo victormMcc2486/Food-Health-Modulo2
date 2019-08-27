@@ -72,6 +72,7 @@
     <Content Include="menu.aspx" />
     <Content Include="MenuC.aspx" />
     <Content Include="Listar.aspx" />
+    <Content Include="PrincipalPage.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +103,13 @@
     </Compile>
     <Compile Include="MenuC.aspx.designer.cs">
       <DependentUpon>MenuC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalPage.aspx.cs">
+      <DependentUpon>PrincipalPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrincipalPage.aspx.designer.cs">
+      <DependentUpon>PrincipalPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Listar.aspx.cs">

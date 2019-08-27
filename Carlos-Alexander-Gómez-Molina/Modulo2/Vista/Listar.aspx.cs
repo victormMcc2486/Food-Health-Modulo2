@@ -25,5 +25,15 @@ namespace Vista
         {
             Response.Redirect("CrudPersona.aspx");
         }
+
+        protected void GvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow fila = GvUsuarios.SelectedRow;
+            string nombre = fila.Cells[2].Text;
+            Response.Write("<script>alert('Se selecciono el nombre:')</script>");
+           
+
+
+        }
     }
 }

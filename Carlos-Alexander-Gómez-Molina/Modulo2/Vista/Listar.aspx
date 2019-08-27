@@ -23,8 +23,11 @@
                           <table class="table table-active">
                               <tr>
                                   <td><center>
-                                      <asp:GridView ID="GvUsuarios" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                      <asp:GridView ID="GvUsuarios" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="GvUsuarios_SelectedIndexChanged">
                                           <AlternatingRowStyle BackColor="White" />
+                                          <Columns>
+                                              <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acciones" ShowHeader="True" Text="Ver" />
+                                          </Columns>
                                           <FooterStyle BackColor="#CCCC99" />
                                           <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
                                           <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />

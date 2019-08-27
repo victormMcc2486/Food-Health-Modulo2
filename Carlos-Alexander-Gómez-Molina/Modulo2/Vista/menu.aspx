@@ -17,9 +17,8 @@
   <a class="navbar-brand">Admin</a>
   <form class="form-inline" runat="server">
       <div style="margin-right: 10px">
-      <asp:Button ID="btnMostrarPersona" runat="server" CssClass="form-control btn btn-danger" Text="Ver Personas" OnClick="btnMostrarPersona_Click" />
+      <asp:Button ID="btnMostrarPersona" runat="server" CssClass="form-control btn btn-danger" Text="Ver Clientes" OnClick="btnMostrarPersona_Click" />
       </div>
-       <asp:Button ID="btnCrudPersona" runat="server" CssClass="form-control btn btn-danger" Text="Modificar Personas" OnClick="btnCrudPersona_Click" />
   </form>
 </nav>
     <!-- Optional JavaScript -->

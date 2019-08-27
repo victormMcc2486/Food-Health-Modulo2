@@ -10,7 +10,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            
             <h1>Bienbenido señor cliente</h1>
+            <h1>Aqui va ver los platos</h1>
+
+
+
         </div>
     </form>
 </body>
