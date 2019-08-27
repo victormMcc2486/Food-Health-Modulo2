@@ -10,7 +10,7 @@
 namespace Modulo2 {
     
     
-    public partial class ListarUsuarios1 {
+    public partial class ListarClientes {
         
         /// <summary>
         /// Control form1.
@@ -22,12 +22,12 @@ namespace Modulo2 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control gvListadoUsuario.
+        /// Control gvListadoClientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvListadoUsuario;
+        protected global::System.Web.UI.WebControls.GridView gvListadoClientes;
     }
 }

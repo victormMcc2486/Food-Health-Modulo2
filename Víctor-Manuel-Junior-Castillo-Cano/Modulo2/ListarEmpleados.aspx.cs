@@ -8,7 +8,7 @@ using Modelo;
 
 namespace Modulo2
 {
-    public partial class ListarUsuarios1 : System.Web.UI.Page
+    public partial class ListarEmpleados : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,9 +16,9 @@ namespace Modulo2
         }
         protected void Listar()
         {
-            gvListadoUsuario.DataSource = Usuarios.ListarUsuarios();
+            gvListadoEmpleados.DataSource = Usuarios.ListarEmpleados();
 
-            gvListadoUsuario.DataBind();
+            gvListadoEmpleados.DataBind();
         }
     }
 }

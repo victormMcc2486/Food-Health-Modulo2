@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarUsuarios.aspx.cs" Inherits="Modulo2.ListarUsuarios1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarEmpleados.aspx.cs" Inherits="Modulo2.ListarEmpleados" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <title>Listar Usuarios</title>
+    <title>Listar Empleados</title>
 </head>
 <body>
     <div class="container">
@@ -18,7 +18,7 @@
                         <table class="table table-active col-12 col-md-8 mx-auto">
                             <tr>
                                 <td>
-                                    <asp:GridView ID="gvListadoUsuario" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <asp:GridView ID="gvListadoEmpleados" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
                                             <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acción" ShowHeader="True" Text="Ver" />

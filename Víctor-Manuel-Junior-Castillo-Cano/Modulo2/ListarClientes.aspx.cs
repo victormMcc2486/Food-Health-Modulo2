@@ -8,17 +8,18 @@ using Modelo;
 
 namespace Modulo2
 {
-    public partial class ListarUsuarios1 : System.Web.UI.Page
+    public partial class ListarClientes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             Listar();
         }
+
         protected void Listar()
         {
-            gvListadoUsuario.DataSource = Usuarios.ListarUsuarios();
+            gvListadoClientes.DataSource = Usuarios.ListarClientes();
 
-            gvListadoUsuario.DataBind();
+            gvListadoClientes.DataBind();
         }
     }
 }

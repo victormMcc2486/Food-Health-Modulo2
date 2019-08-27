@@ -1,15 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarUsuarios.aspx.cs" Inherits="Modulo2.ListarUsuarios1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ListarClientes.aspx.cs" Inherits="Modulo2.ListarClientes" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<html lang="en">
+  <head runat="server">
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <title>Listar Usuarios</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 mx-auto">
@@ -18,7 +19,7 @@
                         <table class="table table-active col-12 col-md-8 mx-auto">
                             <tr>
                                 <td>
-                                    <asp:GridView ID="gvListadoUsuario" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                    <asp:GridView ID="gvListadoClientes" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
                                             <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acción" ShowHeader="True" Text="Ver" />
@@ -42,9 +43,12 @@
             </div>
         </div>
     </div>
+      
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

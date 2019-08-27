@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuAdmin.aspx.cs" Inherits="Modulo2.MenuAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PrincipalPage.aspx.cs" Inherits="Modulo2.PrincipalPage" %>
 
 <!DOCTYPE html>
 
@@ -30,23 +30,30 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contactanos</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Listar
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="ListarUsuarios.aspx">Usuarios</a>
-                            <a class="dropdown-item" href="ListarEmpleados.aspx">Cocineros</a>
-                            <a class="dropdown-item" href="ListarClientes.aspx">Clientes</a>
-                        </div>
-                     </li>
                 </ul>
-                
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Buscar"/>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-                
+
+                <!-- Inicio / Registrate -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Iniciar Sesion
+                    </button>
+                    <a href="#" class="btn btn-danger" role="button" aria-pressed="true">Registrate!</a>
+                    <div class="dropdown-menu p-4" aria-labelledby="btnGroupDrop1">
+                        <form runat="server">
+                            <div class="form-group">
+                                <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
+                                <asp:TextBox ID="txtUsername" CssClass="form-control" placeholder="Username" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
+                                <asp:TextBox ID="txtContraseña" runat="server" CssClass="form-control" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Button ID="btnIngresarLogin" runat="server" CssClass="form-control btn btn-success" Text="Ingresar" OnClick="btnIngresarLogin_Click" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -62,13 +69,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="https://software-carpentry.org/files/2012/05/event_histogram.png" class="d-block w-100" height="500" alt="..."/>
+                            <img src="https://pull03-glorybee.netdna-ssl.com/media/wysiwyg/food-for-health-header.jpg" class="d-block w-100" height="500" alt="..."/>
                         </div>
                         <div class="carousel-item">
-                            <img src="http://orienvis.nic.in/WriteReadData/links/Climate-385836405.jpg" class="d-block w-100" height="500" alt="..."/>
+                            <img src="https://d2ebzu6go672f3.cloudfront.net/media/content/images/p3_MedDiet_W1806_gi667751254.jpg" class="d-block w-100" height="500" alt="..."/>
                         </div>
                         <div class="carousel-item">
-                            <img src="http://www.metafor-project.org/lib/exe/fetch.php/tips:bootstrapping_parametric_mu.png" class="d-block w-100" height="500" alt="..."/>
+                            <img src="https://www.china-briefing.com/news/wp-content/uploads/2019/04/China-Briefing_Increasing-Awareness-and-Growing-Demand-for-Health-Food-Drive-Food-Imports.jpg" class="d-block w-100" height="500" alt="..."/>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -166,7 +173,7 @@
             </div>
         </div>
         <hr/>
-        <!-- Botones de login -->
+        <!-- Botones de registrate -->
         <ul class="list-unstyled list-inline text-center py-2">
             <li class="list-inline-item">
                 <h5 class="mb-1">¡Haz click aquí para </h5>
