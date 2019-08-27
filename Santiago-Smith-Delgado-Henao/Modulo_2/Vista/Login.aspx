@@ -28,6 +28,9 @@
                             </div>
                             <div class="form-group form-check">&nbsp;</div>
                             <asp:Button ID="btnLogin" CssClass="btn btn-lg btn-primary btn-block" runat="server" Text="Enviar" OnClick="btnLogin_Click" />
+
+                            <div class="form-group form-check">&nbsp;</div>
+                        
                         </form>
                         </p>
                     </div>
