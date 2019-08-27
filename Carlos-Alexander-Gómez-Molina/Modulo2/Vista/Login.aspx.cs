@@ -28,10 +28,11 @@ namespace Vista
                 Response.Write("<script>alert('Usuario Incorrecto')</script>");
             }else if (Login == 1)
             {
+                Response.Write("<script> Swal.fire('Hello world!') </script>");
                 Response.Redirect("menu.aspx");
                 
 
-                Response.Write("<script>Swal.fire('Any fool can use a computer')</script>");
+              
             }
             else
             {

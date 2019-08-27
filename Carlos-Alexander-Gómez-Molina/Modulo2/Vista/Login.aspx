@@ -24,7 +24,7 @@
             <div class=" col-md-4 " style="margin-top:15%">
                 <div class="card  bg-dark text-white">
                     <div class="card-body ">
-                        <h5 class="card-title">Sistema de Ingreso   </h5>
+                        <h5 class="card-title">Sistema de Ingreso dd  </h5>
                         <p class="card-text">
                             <form id="form1" runat="server">
                                 <div class="form-group ">
