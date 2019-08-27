@@ -37,5 +37,5 @@ namespace Vista
                     Response.Write("<script>alert('Usuario Incorrecto')</script>");
                 }
             }
-        }
+    }
     }
