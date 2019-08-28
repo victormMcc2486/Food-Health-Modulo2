@@ -57,3 +57,7 @@ C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Modelo.dll
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Modelo.pdb
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Modelo.dll.config
+C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.csprojAssemblyReference.cache
+C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.csproj.CoreCompileInputs.cache
+C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.dll
+C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.pdb
