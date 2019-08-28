@@ -64,5 +64,56 @@ namespace Modelo
 
             return query;
         }
+
+        public static int RegistrarPersona(string Documento, string Nombre, string Direccion, 
+            string Telefono, int idUsuario)
+        {
+            EntidadesDataContext entity = new EntidadesDataContext();
+            int resultado = 0;
+            Persona persona = BuscarPersona(Documento);
+
+            if (persona == null)
+            {
+                try
+                {
+                    persona = new Persona();
+                    persona.idUsuario = idUsuario;
+                    persona.Nombre = Nombre;
+                    persona.Documento = Documento;
+                    persona.Direccion = Direccion;
+                    persona.Telefono = Telefono;
+
+                    entity.Persona.InsertOnSubmit(persona);
+                    entity.SubmitChanges();
+
+                    resultado = 1;
+                }
+                catch (Exception)
+                {
+                    resultado = 2;
+                }
+            }
+            else
+            {
+                resultado = 3;
+            }
+
+            return resultado;
+        }
+        public static Persona BuscarPersona(string documento)
+        {
+            EntidadesDataContext context = new EntidadesDataContext();
+            Persona persona = null;
+
+            var query = context.Persona.Where(p => p.Documento == documento).Select(p => p);
+
+            if (query.Count() > 0)
+            {
+                persona = query.First();
+            }
+
+            return persona;
+        }
+        
     }
 }

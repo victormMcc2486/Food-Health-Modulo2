@@ -18,6 +18,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    <!-- Opciones del navbar -->
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                     </li>
@@ -40,6 +41,9 @@
                             <a class="dropdown-item" href="ListarClientes.aspx">Clientes</a>
                         </div>
                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Registrar.aspx">Registrar</a>
+                    </li>
                 </ul>
                 
                 <form class="form-inline my-2 my-lg-0">

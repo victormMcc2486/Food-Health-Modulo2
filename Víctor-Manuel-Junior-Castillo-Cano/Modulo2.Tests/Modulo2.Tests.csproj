@@ -63,9 +63,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modulo2\Modulo2.csproj">
+    <ProjectReference Include="..\Modulo2\Vista.csproj">
       <Project>{70543F88-D289-4F7A-B2DF-E0A5F3BCBD5B}</Project>
-      <Name>Modulo2</Name>
+      <Name>Vista</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

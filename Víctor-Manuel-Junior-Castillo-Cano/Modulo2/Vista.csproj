@@ -83,6 +83,7 @@
     <Content Include="Login.aspx" />
     <Content Include="MenuAdmin.aspx" />
     <Content Include="PrincipalPage.aspx" />
+    <Content Include="Registrar.aspx" />
     <Content Include="template.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -130,6 +131,13 @@
       <DependentUpon>PrincipalPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registrar.aspx.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrar.aspx.designer.cs">
+      <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="template.aspx.cs">
       <DependentUpon>template.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
