@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="template.aspx.cs" Inherits="Modulo2.template" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registrar.aspx.cs" Inherits="Modulo2.Registrar" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -42,74 +42,42 @@
             </div>
         </nav>
     </header>
-    <!-- Carusel -->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-12">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://pull03-glorybee.netdna-ssl.com/media/wysiwyg/food-for-health-header.jpg" class="d-block w-100" height="500" alt="..."/>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://d2ebzu6go672f3.cloudfront.net/media/content/images/p3_MedDiet_W1806_gi667751254.jpg" class="d-block w-100" height="500" alt="..."/>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://www.china-briefing.com/news/wp-content/uploads/2019/04/China-Briefing_Increasing-Awareness-and-Growing-Demand-for-Health-Food-Drive-Food-Imports.jpg" class="d-block w-100" height="500" alt="..."/>
-                        </div>
+            <div class="col-12 col-sm-12 col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <form runat="server">
+                            <div class="form-group">
+                                <asp:Label runat="server" Text="Nombre"></asp:Label>
+                                <asp:TextBox ID="txtNombre" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" Text="Documento"></asp:Label>
+                                <asp:TextBox ID="txtDocumento" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" Text="Dirección"></asp:Label>
+                                <asp:TextBox ID="txtDireccion" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" Text="Teléfono"></asp:Label>
+                                <asp:TextBox ID="txtTelefono" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Label runat="server" Text="IdUsuario"></asp:Label>
+                                <asp:TextBox ID="txtIdUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                            </div>
+                            <div class="form-group">
+                                <asp:Button ID="btnRegistrar" runat="server" CssClass="form-control btn btn-danger btn-block" Text="Registrar" OnClick="btnRegistrar_Click" />
+                            </div>
+                        </form>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Contenido -->
-    <div class="container" style="padding-top:50px; padding-bottom:50px;">
-        <div class="row">           
-            <div class="card col-sm-12 col-md-4 col-12">
-                <img src="https://www.dvoracky.cz/images/fotogalerie/restaurace/jidlo-salat.jpg" class="card-img-top" height="230" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Paquete Estándar</h5>
-                    <p class="card-text">Acá podras seleccionar el paquete estándar que tenemos reservados para 
-                        nuestros clientes con gustos simples pero con grandes aspiraciones saludables para su alimentación.</p>
-                    <a href="#" class="btn btn-primary">Haz click aquí!</a>
-                </div>
-            </div>
-            <div class="card col-sm-12 col-md-4 col-12">
-                <img src="http://www.cateringalimentos.com.ar/img/menu-estandar.jpg" class="card-img-top" height="230" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Paquete Especial</h5>
-                    <p class="card-text">Este paquete está enfocado en nuestros clientes con gustos sofisticados, 
-                        con un balance perfecto entre el gusto y la salud alimenticia.</p>
-                    <a href="#" class="btn btn-primary">Haz click aquí!</a>
-                </div>
-            </div>
-            <div class="card col-sm-12 col-md-4 col-12">
-                <img src="https://www.przyslijprzepis.pl/uploads/media/recipe/0003/18/a9b2e8ee0f33a8dd239710a3bfa905e67dd7f71a.jpeg" class="card-img-top" height="230" alt="..."/>
-                <div class="card-body">
-                    <h5 class="card-title">Paquete Personalizado</h5>
-                    <p class="card-text">Sigue las opiniones de nuestros nutricionistas especializados para seguir la 
-                        receta que tanto deseas para buscar el equilibrio que tu cuerpo necesita.</p>
-                    <a href="#" class="btn btn-primary">Haz click aquí!</a>
-                </div>
-            </div>            
-        </div>    
-    </div>
-        
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="page-footer font-small bg-dark text-white">
         <div class="container text-center text-md-left">
             <div class="row">
@@ -200,6 +168,6 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script> 
 </body>
 </html>

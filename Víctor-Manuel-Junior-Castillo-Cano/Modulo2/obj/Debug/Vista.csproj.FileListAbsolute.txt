@@ -48,23 +48,12 @@ C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\roslyn\vbc.rsp
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\roslyn\VBCSCompiler.exe
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.csprojAssemblyReference.cache
-C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.csproj.CoreCompileInputs.cache
-C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.csproj.CopyComplete
-C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.dll
-C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.pdb
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Modelo.dll
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Modelo.pdb
 C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Modelo.dll.config
-<<<<<<< HEAD
-C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.csprojAssemblyReference.cache
-C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.csproj.CoreCompileInputs.cache
-C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.dll
-C:\Users\Smith\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.pdb
-=======
-C:\Users\Alex\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.csprojAssemblyReference.cache
-C:\Users\Alex\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.csproj.CoreCompileInputs.cache
-C:\Users\Alex\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.dll
-C:\Users\Alex\Documents\Food-Health-Modulo2\Víctor-Manuel-Junior-Castillo-Cano\Modulo2\obj\Debug\Modulo2.pdb
->>>>>>> 3e939b87393ee48a53d46cc963e215a2702229af
+C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Vista.csprojAssemblyReference.cache
+C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Vista.csproj.CopyComplete
+C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.dll
+C:\Users\Administrador\Documents\VisualStudioProjects\Modulo2\obj\Debug\Modulo2.pdb
