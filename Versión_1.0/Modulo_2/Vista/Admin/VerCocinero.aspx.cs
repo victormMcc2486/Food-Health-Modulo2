@@ -15,16 +15,6 @@ namespace Vista.Admin
             Lista();
         }
 
-        protected void admin_Cocineros(object sender, EventArgs e)
-        {
-            Response.Redirect("AdmiCocinero.aspx");
-        }
-
-        protected void admin_perso(object sender, EventArgs e)
-        {
-            Response.Redirect("MenuAdmin.aspx");
-        }
-
         protected void Lista()
         {
             gvCocineros.DataSource = ClChef.ListaChef();

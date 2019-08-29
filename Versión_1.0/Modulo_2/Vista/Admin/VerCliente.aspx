@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="icon" type="image/png" href="../icono.png" />
     <title>Ver Chef</title>
 </head>
 <body>
@@ -30,6 +31,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="AdminPers.aspx">Chef</a>
                             <a class="dropdown-item" href="AdminCocinero.aspx">Cocineros</a>
+                            <a class="dropdown-item" href="AdminAlimentos.aspx">Alimentos</a>
                         </div>
                      </li>
 
@@ -40,6 +42,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="VerPers.aspx">Chef</a>
                             <a class="dropdown-item" href="VerCocinero.aspx">Cocineros</a>
+                            <a class="dropdown-item" href="VerAlimentos.aspx">Alimentos</a>
                             <a class="dropdown-item">Clientes</a>
                         </div>
                      </li>
@@ -58,6 +61,9 @@
                     <td><center>
                         <asp:GridView ID="gvPersonas" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
                             <AlternatingRowStyle BackColor="White" />
+                            <Columns>
+                                <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acción" ShowHeader="True" Text="Ver" />
+                            </Columns>
                             <EditRowStyle BackColor="#2461BF" />
                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

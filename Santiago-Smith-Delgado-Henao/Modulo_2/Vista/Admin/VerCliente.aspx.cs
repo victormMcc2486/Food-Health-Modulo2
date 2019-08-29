@@ -15,16 +15,6 @@ namespace Vista.Admin
             Lista();
         }
 
-        protected void admin_pers(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminPers.aspx");
-        }
-
-        protected void admin_perso(object sender, EventArgs e)
-        {
-            Response.Redirect("MenuAdmin.aspx");
-        }
-
         protected void Lista()
         {
             gvPersonas.DataSource = ClUsuario.ListaClientes();

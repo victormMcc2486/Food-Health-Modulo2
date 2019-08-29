@@ -17,6 +17,7 @@ CREATE TABLE usuarios (
 	constraint FK_Usuario_Rol foreign key(idRol) references roles(idRol));
 
 
+
 CREATE TABLE cocineros(
 	idCocineros int identity not null, 
 	documento char (10) not null,
@@ -64,3 +65,30 @@ CREATE TABLE alimentos(
 	detalles varchar (20) not null,
 	constraint PK_Primary_PeKLrsonas Primary key (idAlimentos),
 	constraint FK_Primary_Tipo foreign key(idTipo) references tipo_alimentos(idTipo));
+
+
+INSERT INTO roles (nombreRol) values
+	('Administrador'),
+	('Cliente'),
+	('Chef'),
+	('Cocinero');
+
+INSERT INTO usuarios(usuario, clave, idRol) values
+	('Smith', '1234', 1),
+	('Richard', '1234', 2);
+
+INSERT INTO alimentos(nombre, idTipo, detalles) values
+	('Papa', '1', 'Buena');
+
+INSERT INTO tipo_alimentos(nombretipo) values
+	('Comestibles'),
+	('Bebidas');
+
+INSERT INTO cocineros(documento, correo, nombres,direccion,telefono) values
+	('1001546473', 'maria@gmail.com','Maria godinez','medellin','3186673434');
+
+INSERT INTO chef(documento, correo, nombres,direccion,telefono) values
+	('1092834647', 'carlos@gmail.com','carlos godinez','medellin','3205467878');
+
+INSERT INTO clientes(documento, correo, nombres,direccion,telefono) values
+	('1011146473', 'victoria@gmail.com','victoria mela','bello','3186673434');

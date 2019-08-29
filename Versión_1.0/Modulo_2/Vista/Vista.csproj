@@ -67,11 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminAlimentos.aspx" />
     <Content Include="Admin\AdminPers.aspx" />
     <Content Include="Admin\AdminCocinero.aspx" />
+    <Content Include="Admin\VerAlimentos.aspx" />
     <Content Include="Admin\VerCocinero.aspx" />
     <Content Include="Admin\VerCliente.aspx" />
-    <Content Include="Admin\VerPers.aspx" />
+    <Content Include="Admin\VerChef.aspx" />
     <Content Include="Chef\MenuChef.aspx" />
     <Content Include="Cliente\MenuCliente.aspx" />
     <Content Include="Cocinero\MenuCocinero.aspx" />
@@ -81,17 +83,26 @@
     <Content Include="css\bootstrap-reboot.min.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="icono.png" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Registrar.aspx" />
+    <Content Include="RegistroUsuario.aspx" />
     <Content Include="Template.aspx" />
     <Content Include="Admin\MenuAdmin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AdminAlimentos.aspx.cs">
+      <DependentUpon>AdminAlimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminAlimentos.aspx.designer.cs">
+      <DependentUpon>AdminAlimentos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AdminPers.aspx.cs">
       <DependentUpon>AdminPers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +116,13 @@
     </Compile>
     <Compile Include="Admin\AdminCocinero.aspx.designer.cs">
       <DependentUpon>AdminCocinero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VerAlimentos.aspx.cs">
+      <DependentUpon>VerAlimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerAlimentos.aspx.designer.cs">
+      <DependentUpon>VerAlimentos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\VerCocinero.aspx.cs">
       <DependentUpon>VerCocinero.aspx</DependentUpon>
@@ -120,12 +138,12 @@
     <Compile Include="Admin\VerCliente.aspx.designer.cs">
       <DependentUpon>VerCliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\VerPers.aspx.cs">
-      <DependentUpon>VerPers.aspx</DependentUpon>
+    <Compile Include="Admin\VerChef.aspx.cs">
+      <DependentUpon>VerChef.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\VerPers.aspx.designer.cs">
-      <DependentUpon>VerPers.aspx</DependentUpon>
+    <Compile Include="Admin\VerChef.aspx.designer.cs">
+      <DependentUpon>VerChef.aspx</DependentUpon>
     </Compile>
     <Compile Include="Chef\MenuChef.aspx.cs">
       <DependentUpon>MenuChef.aspx</DependentUpon>
@@ -161,6 +179,13 @@
     </Compile>
     <Compile Include="Registrar.aspx.designer.cs">
       <DependentUpon>Registrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUsuario.aspx.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroUsuario.aspx.designer.cs">
+      <DependentUpon>RegistroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template.aspx.cs">
       <DependentUpon>Template.aspx</DependentUpon>

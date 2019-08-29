@@ -51,6 +51,7 @@ namespace Vista
             Limpiar();
             }
 
+        /*
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             string Correo = txtCorreo_Reg.Text;
@@ -74,6 +75,7 @@ namespace Vista
                     break;
             }
         }
+        */
 
         public void Limpiar()
         {

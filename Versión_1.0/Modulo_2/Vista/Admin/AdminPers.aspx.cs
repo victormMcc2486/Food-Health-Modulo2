@@ -14,15 +14,6 @@ namespace Vista.Admin
         {
 
         }
-        protected void admin_perso(object sender, EventArgs e)
-        {
-            Response.Redirect("MenuAdmin.aspx");
-        }
-
-        protected void lista_personas(object sender, EventArgs e)
-        {
-            Response.Redirect("VerPers.aspx");
-        }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {

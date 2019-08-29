@@ -14,15 +14,6 @@ namespace Vista.Admin
         {
 
         }
-        protected void admin_perso(object sender, EventArgs e)
-        {
-            Response.Redirect("MenuAdmin.aspx");
-        }
-
-        protected void lista_cocineros(object sender, EventArgs e)
-        {
-            Response.Redirect("VerCocineros.aspx");
-        }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {

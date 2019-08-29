@@ -13,17 +13,6 @@ namespace Vista
         {
 
         }
-
-        protected void lista_personas(object sender, EventArgs e)
-        {
-            Response.Redirect("VerPers.aspx");
-        }
-
-        protected void admin_pers(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminPers.aspx");
-        }
-
         protected void btnSalir_Click(object sender, EventArgs e)
         {
             Response.Redirect("../Login.aspx");

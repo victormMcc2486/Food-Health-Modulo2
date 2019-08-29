@@ -37,7 +37,7 @@
                     <button id="btnGroupDrop1" type="button" class="btn btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Iniciar Sesion
                     </button>
-                                        <a class="btn btn-danger" href="Registrar.aspx">Registrar</a>
+                                        <a class="btn btn-danger" href="RegistroUsuario.aspx">Registrar</a>
 
                     <form runat="server">
                         <!-- Iniciar sesion -->
@@ -55,32 +55,7 @@
                             </div>
                         </div>
                         <!-- Registrate -->
-                        <div class="dropdown-menu p-4" aria-labelledby="btnGroupDrop2">
-                        
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Documento"></asp:Label>
-                                <asp:TextBox ID="txtDocumento_Reg" CssClass="form-control" placeholder="Documento" runat="server"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Correo"></asp:Label>
-                                <asp:TextBox ID="txtCorreo_Reg" runat="server" TextMode="Email" CssClass="form-control" placeholder="Correo"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Nombre"></asp:Label>
-                                <asp:TextBox ID="txtNombre_Reg" runat="server" CssClass="form-control" placeholder="Nombre"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Dirección"></asp:Label>
-                                <asp:TextBox ID="txtDireccion_Reg" runat="server" CssClass="form-control" placeholder="Dirección"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Teléfono"></asp:Label>
-                                <asp:TextBox ID="txtTelefono_Reg" runat="server" CssClass="form-control" placeholder="Teléfono"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Button ID="btnRegistrar1" runat="server" CssClass="form-control btn btn-danger" Text="Registrate" OnClick="btnRegistrar_Click" />
-                            </div>
-                        </div>
+                       
                     </form>
                 </div>
             </div>

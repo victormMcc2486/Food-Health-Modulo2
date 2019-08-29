@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClAlimentos.cs" />
     <Compile Include="ClChef.cs" />
     <Compile Include="ClCocineros.cs" />
     <Compile Include="ClLogin.cs" />

@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <link rel="icon" type="image/png" href="../icono.png" />
     <title>Administrar Chef</title>
 </head>
 <body>
@@ -30,6 +31,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="AdminPers.aspx">Chef</a>
                             <a class="dropdown-item" href="VerCocinero.aspx">Cocineros</a>
+                            <a class="dropdown-item" href="AdminAlimentos.aspx">Alimentos</a>
                         </div>
                      </li>
 
@@ -42,6 +44,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="VerPers.aspx">Chef</a>
                             <a class="dropdown-item" href="VerCocinero.aspx">Cocineros</a>
+                             <a class="dropdown-item" href="VerAlimentos.aspx">Alimentos</a>
                             <a class="dropdown-item" href="VerCliente.aspx">Clientes</a>
                         </div>
                      </li>
