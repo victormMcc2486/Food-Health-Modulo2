@@ -12,7 +12,6 @@
     <title>Menú Administrador</title>
 </head>
 <body>
-    <header>
         <ul id="dropdown1" class="dropdown-content">
             <li><a href="AdminChef.aspx">Chef</a></li>
             <li><a href="AdminCocinero.aspx">Cocineros</a></li>
@@ -30,7 +29,7 @@
                 <li class="right ">
                     <a href="../Login.aspx" class="waves-effect waves-light btn btn-#1b5e20 green darken-4"><i class="material-icons right">power_settings_new</i>Cerrar Sesion</a>
                     <div class="fixed-action-btn vertical col-sm-5">
-                        <a class="btn-floating btn-large pulse black">
+                        <a class="btn-floating btn-large pulse btn-#1b5e20 green darken-4">
                             <i class="large material-icons">home</i>
                         </a>
                         <ul>
@@ -50,21 +49,22 @@
                 <br />
                 <li><a style="text-decoration: none" class="dropdown-button" href="#!" data-activates="dropdown2">Listar<i class="material-icons right">arrow_drop_down</i></a></li>
                 <li class="right ">
-                
+
                     <a href="../Login.aspx" class="waves-effect waves-light btn btn-#1b5e20 green darken-4"><i class="material-icons right">power_settings_new</i>Cerrar Sesion</a>
-                    </li>
+                </li>
             </ul>
 
         </nav>
 
-    </header>
     <center>
-            <div class="carousel carousel-slider ">
+        <div class="container-fluid" >
+            <div class="carousel carousel-slider" >
                 <a class="carousel-item">
-                    <img src="http://www.mercadonegro.pe/wp-content/uploads/2018/02/habitos-alimenticios.jpg" /></a>
+                    <img src="http://gestion2.e3.pe/ima/0/0/1/3/1/131464.jpg" /></a>
                 <a class="carousel-item">
                     <img src="https://statics-correofarmaceutico.uecdn.es/cms/sites/11/2018/11/piramide-alimentacion-saludable-5bfe978e72d41.jpg"  /></a>
             </div>
+        </div>   
         </center>
     <!--Menu-->
 

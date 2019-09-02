@@ -26,7 +26,7 @@
                     <a href="../Login.aspx" class="waves-effect waves-light btn btn-#1b5e20 green darken-4"><i class="material-icons right">power_settings_new</i>Cerrar Sesion</a>
                 </li>
                 <div class="fixed-action-btn vertical col-sm-5">
-                    <a class="btn-floating btn-large pulse black">
+                    <a class="btn-floating btn-large pulse btn-#1b5e20 green darken-4">
                         <i class="large material-icons">home</i>
                     </a>
                     <ul>

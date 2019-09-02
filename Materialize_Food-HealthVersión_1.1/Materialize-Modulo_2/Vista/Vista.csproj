@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Chef\AdminAlimentos.aspx" />
-    <Content Include="Chef\AdminChef.aspx" />
+    <Content Include="Admin\AdminChef.aspx" />
     <Content Include="Admin\AdminCocinero.aspx" />
     <Content Include="Chef\VerAlimentos.aspx" />
     <Content Include="Admin\VerCocinero.aspx" />
@@ -108,11 +108,11 @@
     <Compile Include="Chef\AdminAlimentos.aspx.designer.cs">
       <DependentUpon>AdminAlimentos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Chef\AdminChef.aspx.cs">
+    <Compile Include="Admin\AdminChef.aspx.cs">
       <DependentUpon>AdminChef.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Chef\AdminChef.aspx.designer.cs">
+    <Compile Include="Admin\AdminChef.aspx.designer.cs">
       <DependentUpon>AdminChef.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\AdminCocinero.aspx.cs">

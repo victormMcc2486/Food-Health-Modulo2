@@ -29,7 +29,7 @@
                 <a href="../Login.aspx" class="waves-effect waves-light btn btn-#1b5e20 green darken-4"><i class="material-icons right">power_settings_new</i>Cerrar Sesion</a>
             </li>
             <div class="fixed-action-btn vertical col-sm-5">
-                <a class="btn-floating btn-large pulse black">
+                <a class="btn-floating btn-large pulse btn-#1b5e20 green darken-4">
                     <i class="large material-icons">home</i>
                 </a>
                 <ul>
@@ -56,7 +56,7 @@
 
     <div class="carousel carousel-slider">
         <a class="carousel-item">
-            <img src="https://grupobelskin.com/eng/wp-content/uploads/2017/02/FONDO-MENU-ARCHIVO-DE-TRABAJO-MOZAICO-15FEB17.jpg" /></a>
+            <img src="https://miro.medium.com/max/2048/1*ohcH3mQ6i0JISYmo7fKDbA.png" /></a>
     </div>
 
     <!--Menu-->
