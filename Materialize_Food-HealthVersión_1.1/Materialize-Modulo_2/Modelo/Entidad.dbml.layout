@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="Entidad">
+  <DataContextMoniker Name="/EntidadDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9cb45962-f382-4abe-bd00-2805865d89f2" absoluteBounds="3.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EntidadDataContext/alimentos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37cf3690-ed85-4a8a-8f0f-d7c6f4a02916" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0814bfe-a1d3-4243-b91e-e30f708aa155" absoluteBounds="6.75, 0.75, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/EntidadDataContext/chef" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ba47fd7-0956-45fe-b211-64ae51dae415" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3fb33c3-fd4e-49c0-a5e6-24e9defba48a" absoluteBounds="0.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/EntidadDataContext/clientes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f755862-7424-4413-b24d-87878c49866f" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7229f9f2-d413-4f18-9c9c-e35877e09740" absoluteBounds="6.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/EntidadDataContext/cocineros" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9212d9d6-3a57-41a2-8037-6998076d6c19" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd93ff76-6881-4b55-956d-2fd6954a6ab1" absoluteBounds="0.75, 1.125, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/EntidadDataContext/roles" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e3ab338-cf58-410b-9813-31b42ae326ff" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="396e7180-ab2a-46da-bf71-872d6ccedffc" absoluteBounds="0.75, 4.125, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/EntidadDataContext/tipo_alimentos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0ee022e-e29e-461c-89a8-557e677c86ee" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="281bd1d9-a954-4179-af92-ef087906b0bd" absoluteBounds="3.5, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/EntidadDataContext/usuarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c7864a0f-fa8e-490e-827e-c5c6de366738" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.72199625651042); (3.5 : 4.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EntidadDataContext/tipo_alimentos/tipo_alimentos_alimentos" />
+      <nodes>
+        <classShapeMoniker Id="396e7180-ab2a-46da-bf71-872d6ccedffc" />
+        <classShapeMoniker Id="9cb45962-f382-4abe-bd00-2805865d89f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.72199625651042); (3.5 : 1.72199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EntidadDataContext/roles/roles_usuarios" />
+      <nodes>
+        <classShapeMoniker Id="dd93ff76-6881-4b55-956d-2fd6954a6ab1" />
+        <classShapeMoniker Id="281bd1d9-a954-4179-af92-ef087906b0bd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
