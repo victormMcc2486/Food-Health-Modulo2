@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace Modulo2 {
+namespace Vista {
     
     
-    public partial class MenuAdmin {
+    public partial class MenuCliente {
     }
 }

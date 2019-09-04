@@ -22,10 +22,16 @@ namespace Modulo2
             switch (Rol)
             {
                 case 1:
-                    Response.Redirect("MenuAdmin.aspx");
+                    Response.Redirect("Admin/MenuAdmin.aspx");
                     break;
                 case 2:
-                    Response.Redirect("MenuCliente.aspx");
+                    Response.Redirect("Cliente/MenuCliente.aspx");
+                    break;
+                case 3:
+                    Response.Redirect("Chef/MenuChef.aspx");
+                    break;
+                case 4:
+                    Response.Redirect("Cocinero/MenuCocinero.aspx");
                     break;
                 default:
                     Response.Write("<script>alert('Error al iniciar sesión')</script>");

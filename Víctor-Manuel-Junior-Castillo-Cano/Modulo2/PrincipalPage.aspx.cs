@@ -19,18 +19,25 @@ namespace Modulo2
 
             int Rol = ClLogin.IniciarSesion(txtUsername.Text, txtContraseña.Text);
 
+            LimpiarCampos();
+
             switch (Rol)
             {
                 case 1:
-                    Response.Redirect("MenuAdmin.aspx");
+                    Response.Redirect("Admin/MenuAdmin.aspx");
                     break;
                 case 2:
-                    Response.Redirect("MenuCliente.aspx");
+                    Response.Redirect("Clientes/MenuCliente.aspx");
                     break;
                 default:
                     Response.Write("<script>alert('Error al iniciar sesión')</script>");
                     break;
             }
+        }
+        private void LimpiarCampos()
+        {
+            txtUsername.Text = string.Empty;
+            txtContraseña.Text = string.Empty;
         }
     }
 }

@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Login</h5>
                         <form id="Login_form" runat="server">
-                            <p class="card-text">
+                            
                                 <div class="form-group">
                                     <asp:Label ID="Label1" runat="server" Text="Usuario: "></asp:Label>
                                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control"></asp:TextBox>
@@ -32,7 +32,7 @@
                                 <div class="form-group">
                                     <asp:Button ID="btnLogin" CssClass="form-control btn btn-danger" runat="server" Text="IniciarSesion" OnClick="btnLogin_Click" />
                                 </div>     
-                            </p>                                    
+                                                             
                         </form>            
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuAdmin.aspx.cs" Inherits="Modulo2.MenuAdmin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuCocinero.aspx.cs" Inherits="Vista.MenuCocinero" %>
 
 <!DOCTYPE html>
 
@@ -6,13 +6,14 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>food/health</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+     <link rel="icon" type="image/png" href="../icono.png" />
+    <title>Menú Cocinero</title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Food / health</a>
+            <a class="navbar-brand" href="#">food / health</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -131,56 +132,7 @@
                     <p>El restauante donde tu podrás encontrar tu comida ideal al mejor precio que favorece a tu gusto y a tu cuerpo.</p>
 
                 </div>
-                <!-- Agrupacion de links -->
-                <hr class="clearfix w-100 d-md-none" />
-                <div class="col-md-2 mx-auto">
-                    <!-- Links -->
-                    <h5 class="text-uppercase mt-3 mb-4">Preguntas frecuentes</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#!">Inicio</a></li>
-                        <li><a href="#!">Productos</a></li>
-                        <li><a href="#!">Nosotros</a></li>
-                        <li><a href="#!">Contactanos</a></li>
-                    </ul>
-                </div>
-                 <!-- Agrupacion de links -->
-                <hr class="clearfix w-100 d-md-none"/>
-                <div class="col-md-2 mx-auto">
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#!">Link 1</a></li>
-                        <li><a href="#!">Link 2</a></li>
-                        <li><a href="#!">Link 3</a></li>
-                        <li><a href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <!-- Agrupacion de links -->
-                <hr class="clearfix w-100 d-md-none" />
-                <div class="col-md-2 mx-auto">
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#!">Link 1</a></li>
-                        <li><a href="#!">Link 2</a></li>
-                        <li><a href="#!">Link 3</a></li>
-                        <li><a href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <hr/>
-        <!-- Botones de login -->
-        <ul class="list-unstyled list-inline text-center py-2">
-            <li class="list-inline-item">
-                <h5 class="mb-1">¡Haz click aquí para </h5>
-            </li>
-            <li class="list-inline-item">
-                <a href="#!" class="btn btn-danger btn-rounded">Registrarte!</a>
-            </li>
-        </ul>
-        <hr/>
-
+         
         <!-- Botones de redes sociales -->
         <ul class="list-unstyled list-inline text-center">
             <li class="list-inline-item">
@@ -212,6 +164,6 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>    
+    <script src="../js/bootstrap.min.js"></script>    
 </body>
 </html>
