@@ -15,10 +15,57 @@ namespace Vista.Admin
             Lista();
         }
 
-        protected void Lista()
+        private void Lista()
         {
             gvCocineros.DataSource = ClChef.ListaChef();
             gvCocineros.DataBind();
+        }
+
+        private void AsignarCampos()
+        {
+            string documento = hfDocumento.Value;
+            cocineros Cocineros = ClCocineros.Buscar_Documento_Cocinero(documento);
+
+            hfCocinero.Value = Cocineros.idCocineros.ToString();
+
+            txtDireccion.Text = Cocineros.direccion;
+            txtDocumento.Text = Cocineros.documento;
+            txtEmail.Text = Cocineros.correo;
+            txtNombre.Text = Cocineros.nombres;
+            txtTelefono.Text = Cocineros.telefono;
+        }
+
+        private void MostrarModal()
+        {
+            modal.Visible = true;
+        }
+
+        private void OcultarModal()
+        {
+            modal.Visible = false;
+        }
+
+        protected void gvCocineros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow fila = gvCocineros.SelectedRow;
+            hfDocumento.Value = fila.Cells[1].Text;
+            AsignarCampos();
+            MostrarModal();
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

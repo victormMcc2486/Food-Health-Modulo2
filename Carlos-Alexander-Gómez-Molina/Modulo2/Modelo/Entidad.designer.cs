@@ -36,9 +36,9 @@ namespace Modelo
     partial void Insertrol(rol instance);
     partial void Updaterol(rol instance);
     partial void Deleterol(rol instance);
-    partial void InsertUsuario(Usuario instance);
-    partial void UpdateUsuario(Usuario instance);
-    partial void DeleteUsuario(Usuario instance);
+    partial void Insertusuario(usuario instance);
+    partial void Updateusuario(usuario instance);
+    partial void Deleteusuario(usuario instance);
     #endregion
 		
 		public EntidadDataContext() : 
@@ -87,11 +87,11 @@ namespace Modelo
 			}
 		}
 		
-		public System.Data.Linq.Table<Usuario> Usuario
+		public System.Data.Linq.Table<usuario> usuario
 		{
 			get
 			{
-				return this.GetTable<Usuario>();
+				return this.GetTable<usuario>();
 			}
 		}
 	}
@@ -102,11 +102,11 @@ namespace Modelo
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id;
+		private int _idPersona;
 		
 		private string _nombre;
 		
-		private string _correo;
+		private string _idUsuario;
 		
 		private string _documento;
 		
@@ -118,12 +118,12 @@ namespace Modelo
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
+    partial void OnidPersonaChanging(int value);
+    partial void OnidPersonaChanged();
     partial void OnnombreChanging(string value);
     partial void OnnombreChanged();
-    partial void OncorreoChanging(string value);
-    partial void OncorreoChanged();
+    partial void OnidUsuarioChanging(string value);
+    partial void OnidUsuarioChanged();
     partial void OndocumentoChanging(string value);
     partial void OndocumentoChanged();
     partial void OntelefonoChanging(string value);
@@ -137,22 +137,22 @@ namespace Modelo
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idPersona", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idPersona
 		{
 			get
 			{
-				return this._id;
+				return this._idPersona;
 			}
 			set
 			{
-				if ((this._id != value))
+				if ((this._idPersona != value))
 				{
-					this.OnidChanging(value);
+					this.OnidPersonaChanging(value);
 					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
+					this._idPersona = value;
+					this.SendPropertyChanged("idPersona");
+					this.OnidPersonaChanged();
 				}
 			}
 		}
@@ -177,22 +177,22 @@ namespace Modelo
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_correo", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
-		public string correo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string idUsuario
 		{
 			get
 			{
-				return this._correo;
+				return this._idUsuario;
 			}
 			set
 			{
-				if ((this._correo != value))
+				if ((this._idUsuario != value))
 				{
-					this.OncorreoChanging(value);
+					this.OnidUsuarioChanging(value);
 					this.SendPropertyChanging();
-					this._correo = value;
-					this.SendPropertyChanged("correo");
-					this.OncorreoChanged();
+					this._idUsuario = value;
+					this.SendPropertyChanged("idUsuario");
+					this.OnidUsuarioChanged();
 				}
 			}
 		}
@@ -284,78 +284,78 @@ namespace Modelo
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id;
+		private int _idRol;
 		
-		private string _nombre;
+		private string _NombreRol;
 		
-		private EntitySet<Usuario> _Usuario;
+		private EntitySet<usuario> _usuario;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnnombreChanging(string value);
-    partial void OnnombreChanged();
+    partial void OnidRolChanging(int value);
+    partial void OnidRolChanged();
+    partial void OnNombreRolChanging(string value);
+    partial void OnNombreRolChanged();
     #endregion
 		
 		public rol()
 		{
-			this._Usuario = new EntitySet<Usuario>(new Action<Usuario>(this.attach_Usuario), new Action<Usuario>(this.detach_Usuario));
+			this._usuario = new EntitySet<usuario>(new Action<usuario>(this.attach_usuario), new Action<usuario>(this.detach_usuario));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idRol", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idRol
 		{
 			get
 			{
-				return this._id;
+				return this._idRol;
 			}
 			set
 			{
-				if ((this._id != value))
+				if ((this._idRol != value))
 				{
-					this.OnidChanging(value);
+					this.OnidRolChanging(value);
 					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
+					this._idRol = value;
+					this.SendPropertyChanged("idRol");
+					this.OnidRolChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
-		public string nombre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NombreRol", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string NombreRol
 		{
 			get
 			{
-				return this._nombre;
+				return this._NombreRol;
 			}
 			set
 			{
-				if ((this._nombre != value))
+				if ((this._NombreRol != value))
 				{
-					this.OnnombreChanging(value);
+					this.OnNombreRolChanging(value);
 					this.SendPropertyChanging();
-					this._nombre = value;
-					this.SendPropertyChanged("nombre");
-					this.OnnombreChanged();
+					this._NombreRol = value;
+					this.SendPropertyChanged("NombreRol");
+					this.OnNombreRolChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_Usuario", Storage="_Usuario", ThisKey="id", OtherKey="id_rol")]
-		public EntitySet<Usuario> Usuario
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario", Storage="_usuario", ThisKey="idRol", OtherKey="idRol")]
+		public EntitySet<usuario> usuario
 		{
 			get
 			{
-				return this._Usuario;
+				return this._usuario;
 			}
 			set
 			{
-				this._Usuario.Assign(value);
+				this._usuario.Assign(value);
 			}
 		}
 		
@@ -379,32 +379,32 @@ namespace Modelo
 			}
 		}
 		
-		private void attach_Usuario(Usuario entity)
+		private void attach_usuario(usuario entity)
 		{
 			this.SendPropertyChanging();
 			entity.rol = this;
 		}
 		
-		private void detach_Usuario(Usuario entity)
+		private void detach_usuario(usuario entity)
 		{
 			this.SendPropertyChanging();
 			entity.rol = null;
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Usuario")]
-	public partial class Usuario : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.usuario")]
+	public partial class usuario : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _id;
+		private int _idUsuario;
 		
-		private string _users;
+		private string _Usuario1;
 		
-		private string _pass;
+		private string _Clave;
 		
-		private int _id_rol;
+		private int _idRol;
 		
 		private EntityRef<rol> _rol;
 		
@@ -412,107 +412,107 @@ namespace Modelo
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnidChanging(int value);
-    partial void OnidChanged();
-    partial void OnusersChanging(string value);
-    partial void OnusersChanged();
-    partial void OnpassChanging(string value);
-    partial void OnpassChanged();
-    partial void Onid_rolChanging(int value);
-    partial void Onid_rolChanged();
+    partial void OnidUsuarioChanging(int value);
+    partial void OnidUsuarioChanged();
+    partial void OnUsuario1Changing(string value);
+    partial void OnUsuario1Changed();
+    partial void OnClaveChanging(string value);
+    partial void OnClaveChanged();
+    partial void OnidRolChanging(int value);
+    partial void OnidRolChanged();
     #endregion
 		
-		public Usuario()
+		public usuario()
 		{
 			this._rol = default(EntityRef<rol>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idUsuario
 		{
 			get
 			{
-				return this._id;
+				return this._idUsuario;
 			}
 			set
 			{
-				if ((this._id != value))
+				if ((this._idUsuario != value))
 				{
-					this.OnidChanging(value);
+					this.OnidUsuarioChanging(value);
 					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
+					this._idUsuario = value;
+					this.SendPropertyChanged("idUsuario");
+					this.OnidUsuarioChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string users
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Usuario", Storage="_Usuario1", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Usuario1
 		{
 			get
 			{
-				return this._users;
+				return this._Usuario1;
 			}
 			set
 			{
-				if ((this._users != value))
+				if ((this._Usuario1 != value))
 				{
-					this.OnusersChanging(value);
+					this.OnUsuario1Changing(value);
 					this.SendPropertyChanging();
-					this._users = value;
-					this.SendPropertyChanged("users");
-					this.OnusersChanged();
+					this._Usuario1 = value;
+					this.SendPropertyChanged("Usuario1");
+					this.OnUsuario1Changed();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pass", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string pass
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Clave", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Clave
 		{
 			get
 			{
-				return this._pass;
+				return this._Clave;
 			}
 			set
 			{
-				if ((this._pass != value))
+				if ((this._Clave != value))
 				{
-					this.OnpassChanging(value);
+					this.OnClaveChanging(value);
 					this.SendPropertyChanging();
-					this._pass = value;
-					this.SendPropertyChanged("pass");
-					this.OnpassChanged();
+					this._Clave = value;
+					this.SendPropertyChanged("Clave");
+					this.OnClaveChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_rol", DbType="Int NOT NULL")]
-		public int id_rol
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idRol", DbType="Int NOT NULL")]
+		public int idRol
 		{
 			get
 			{
-				return this._id_rol;
+				return this._idRol;
 			}
 			set
 			{
-				if ((this._id_rol != value))
+				if ((this._idRol != value))
 				{
 					if (this._rol.HasLoadedOrAssignedValue)
 					{
 						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
 					}
-					this.Onid_rolChanging(value);
+					this.OnidRolChanging(value);
 					this.SendPropertyChanging();
-					this._id_rol = value;
-					this.SendPropertyChanged("id_rol");
-					this.Onid_rolChanged();
+					this._idRol = value;
+					this.SendPropertyChanged("idRol");
+					this.OnidRolChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_Usuario", Storage="_rol", ThisKey="id_rol", OtherKey="id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="rol_usuario", Storage="_rol", ThisKey="idRol", OtherKey="idRol", IsForeignKey=true)]
 		public rol rol
 		{
 			get
@@ -529,17 +529,17 @@ namespace Modelo
 					if ((previousValue != null))
 					{
 						this._rol.Entity = null;
-						previousValue.Usuario.Remove(this);
+						previousValue.usuario.Remove(this);
 					}
 					this._rol.Entity = value;
 					if ((value != null))
 					{
-						value.Usuario.Add(this);
-						this._id_rol = value.id;
+						value.usuario.Add(this);
+						this._idRol = value.idRol;
 					}
 					else
 					{
-						this._id_rol = default(int);
+						this._idRol = default(int);
 					}
 					this.SendPropertyChanged("rol");
 				}

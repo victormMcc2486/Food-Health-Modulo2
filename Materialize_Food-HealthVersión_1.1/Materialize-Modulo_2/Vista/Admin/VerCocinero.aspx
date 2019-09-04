@@ -59,10 +59,10 @@
             <table class="table table-active" style="margin-top:30px;">
                 <tr>
                     <td><center>
-                        <asp:GridView ID="gvCocineros" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                        <asp:GridView ID="gvCocineros" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvCocineros_SelectedIndexChanged">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
-                                <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="Acción" ShowHeader="True" Text="Ver" />
+                                <asp:ButtonField CommandName="Select" ControlStyle-CssClass="waves-effect waves-light btn modal-trigger" HeaderText="Action" ShowHeader="True" Text="Ver" />
                             </Columns>
                             <EditRowStyle BackColor="#2461BF" />
                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -80,6 +80,74 @@
             </table>
                 </div>
         </div>
+
+        <!-- Modal Structure -->
+ <div class="modal" tabindex="-1" runat="server" id="modal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modificar Cocinero</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+           <div runat="server" id="modificar">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-xl-2 col-md-2"></div>
+                            <div class="col-12 col-sm-12 col-xl-8 col-md-8">
+                                <div class="form-group">
+
+                                    <asp:HiddenField ID="hfCocinero" runat="server" />
+                                    <asp:HiddenField ID="hfDocumento" runat="server" />
+                                    <asp:Label runat="server" Text="N. Documento"></asp:Label>
+                                    <asp:TextBox ID="txtDocumento" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <asp:Label runat="server" Text="Email"></asp:Label>
+                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <asp:Label runat="server" Text="Nombre"></asp:Label>
+                                    <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" TextMode="SingleLine"></asp:TextBox>
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <asp:Label runat="server" Text="Dirección"></asp:Label>
+                                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" TextMode="MultiLine"></asp:TextBox>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <asp:Label runat="server" Text="Teléfono"></asp:Label>
+                                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                                </div>
+
+                                <center><div class="form-group" >
+
+                                    <asp:Button ID="btnModificar" CssClass="btn btn-primary btn-block" runat="server" Text="Modificar" OnClick="btnModificar_Click" style="width: 100%; margin-bottom:5px" />
+                                    <asp:Button ID="btnEliminar" CssClass="btn btn-warning btn-block" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" style="width: 100%; margin-bottom:5px" />                                    
+                                </div></center>
+
+
+                            </div>
+                        </div>
+                    </div>
+      </div>
+      <div class="modal-footer">
+        <asp:Button ID="btnCancelar" CssClass="btn btn-danger" runat="server" Text="Cancelar" OnClick="btnCancelar_Click"/>
+      </div>
+    </div>
+  </div>
+</div>
+
     </form>
 
        <footer class="page-footer font-small bg-dark text-white" style="margin-top:121px;">

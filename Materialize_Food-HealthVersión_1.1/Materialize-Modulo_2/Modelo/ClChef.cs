@@ -80,5 +80,60 @@ namespace Modelo
             }
             return Chef;
         }
+
+        public static int ModificarChef(int id, string documento, string correo, string nombres,
+           string direccion, string telefono)
+        {
+            int resultado = 0;
+
+            EntidadDataContext entity = new EntidadDataContext();
+
+
+                chef Chef = entity.chef.Where(c => c.idChef == id).Select(c => c).First();
+                Chef.documento = documento;
+                Chef.correo = correo;
+                Chef.nombres = nombres;
+                Chef.direccion = direccion;
+                Chef.telefono = telefono;
+
+                try
+                {
+                    entity.SubmitChanges();
+
+                    resultado = 3;
+                    //Exitoooo
+                }
+                catch (Exception)
+                {
+                    resultado = 2;
+                    //Error al guardar
+                }
+            
+            return resultado;
+        }
+
+
+        public static bool EliminarChef(int idChef)
+        {
+            EntidadDataContext entity = new EntidadDataContext();
+            bool resultado = true;
+
+            chef Chef = entity.chef.Where(p => p.idChef == idChef).Select(p => p).First();
+
+            try
+            {
+                entity.chef.DeleteOnSubmit(Chef);
+                entity.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
+
+
+
     }
 }

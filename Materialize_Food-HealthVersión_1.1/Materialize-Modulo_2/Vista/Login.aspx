@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="icon" type="image/png" href="../icono.png" />
     <link rel="stylesheet" href="Mcss/materialize.min.css" media="screen,projection" />
     <title>Food/Health</title>
 
@@ -74,13 +75,13 @@
     <!-- Contenido -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col s12 m7">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <div class="card-image">
                         <img src="https://www.dvoracky.cz/images/fotogalerie/restaurace/jidlo-salat.jpg" />
                         <span class="card-title">Paquete Estándar</span>
                     </div>
-                    <div class="card-content" style="height: 200px">
+                    <div class="card-content" style="height:auto">
                         <p>
                             Acá podras seleccionar el paquete estándar que tenemos reservados para 
                         nuestros clientes con gustos simples pero con grandes aspiraciones saludables para su alimentación.
@@ -91,13 +92,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m7">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <div class="card-image">
                         <img src="http://www.cateringalimentos.com.ar/img/menu-estandar.jpg" />
                         <span class="card-title">Paquete Especial</span>
                     </div>
-                    <div class="card-content" style="height: 200px">
+                    <div class="card-content" style="height:auto">
                         <p>
                             Este paquete está enfocado en nuestros clientes con gustos sofisticados, 
                         con un balance perfecto entre el gusto y la salud alimenticia.
@@ -108,13 +109,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m7">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                 <div class="card">
                     <div class="card-image">
                         <img src="https://www.przyslijprzepis.pl/uploads/media/recipe/0003/18/a9b2e8ee0f33a8dd239710a3bfa905e67dd7f71a.jpeg" />
                         <span class="card-title">Paquete Personalizado</span>
                     </div>
-                    <div class="card-content" style="height: 200px">
+                    <div class="card-content" style="height:auto">
                         <p>
                             Sigue las opiniones de nuestros nutricionistas especializados para seguir la 
                         receta que tanto deseas para buscar el equilibrio que tu cuerpo necesita.

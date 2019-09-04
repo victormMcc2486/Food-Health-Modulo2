@@ -5,21 +5,22 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Modelo;
-
-namespace Vista.Admin
+namespace Vista
 {
-    public partial class VerChef : System.Web.UI.Page
+    public partial class Prueva : System.Web.UI.Page
     {
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             Lista();
-            OcultarModal();
         }
 
-        private void OcultarModal()
+        private void OcultarDiv()
         {
-            
-            modal.Visible = false;
+
+            modificar.Visible = false;
         }
 
         protected void Lista()
@@ -43,7 +44,7 @@ namespace Vista.Admin
             string telefono = txtTelefono.Text;
 
 
-            int resultado = ClChef.ModificarChef(id, documento,correo,nombres, direccion,telefono);
+            int resultado = ClChef.ModificarChef(id, documento, correo, nombres, direccion, telefono);
 
             if (resultado == 2)
             {
@@ -60,7 +61,6 @@ namespace Vista.Admin
         {
             string documento = hfDocumento.Value;
             chef Clientes = ClChef.Buscar_Documento_Chef(documento);
-
             hfCliente.Value = Clientes.idChef.ToString();
 
             txtDocumento.Text = Clientes.documento;
@@ -69,11 +69,7 @@ namespace Vista.Admin
             txtNombre.Text = Clientes.nombres;
             txtTelefono.Text = Clientes.telefono;
 
-        }
-
-        private void MostrarModal()
-        {
-            modal.Visible = true;
+            modificar.Visible = true;
         }
 
         protected void gvPersonas_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,8 +77,7 @@ namespace Vista.Admin
             GridViewRow fila = gvPersonas.SelectedRow;
             hfDocumento.Value = fila.Cells[1].Text;
             AsignarCampos();
-            MostrarModal();
-
+            Response.Write("<script>windows.location('#modal1')</script>");
 
         }
         public void Limpiar()
@@ -92,24 +87,6 @@ namespace Vista.Admin
             txtNombre.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             txtTelefono.Text = string.Empty;
-        }
-
-
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-            int idChef = int.Parse(hfCliente.Value);
-            bool resultado = ClChef.EliminarChef(idChef);
-
-            if (resultado == false)
-            {
-                Response.Write("<script>alert('Ocurrió un error al eliminar')</script>");
-            }
-            else
-            {
-                Response.Write("<script>alert('Chef eliminado con éxito')</script>");
-            }
-            Limpiar();
-            Lista();
         }
     }
 }

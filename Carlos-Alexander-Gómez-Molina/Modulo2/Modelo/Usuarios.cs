@@ -13,7 +13,7 @@ namespace Modelo
             EntidadDataContext context = new EntidadDataContext();
             persona persona = null;
 
-            var query = context.persona.Where(p => p.id == userID).Select(p => p);
+            var query = context. persona.Where(p => p.idPersona == userID).Select(p => p);
 
             if(query.Count() > 0)
             {
@@ -21,6 +21,19 @@ namespace Modelo
             }
             return persona;
                  
+        }
+        public static persona Buscar_Documento(string documento)
+        {
+            EntidadDataContext context = new EntidadDataContext();
+            persona Per = null;
+
+            var query = context.persona.Where(p => p.documento == documento).Select(p => p);
+
+            if (query.Count() > 0)
+            {
+                Per = query.First();
+            }
+            return Per;
         }
         public static object ListaPersona()
         {
@@ -31,9 +44,9 @@ namespace Modelo
                         {
                             Nombre = u.nombre,
                             Documento = u.documento,
-                            Correo = u.correo,
-                            Direccion = u.direccion,
-                            Telefono = u.telefono
+                            Telefono = u.telefono,
+                            Direccion = u.direccion
+
                         };
 
             return query;

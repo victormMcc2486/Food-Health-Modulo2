@@ -17,8 +17,8 @@ namespace Modelo
                         select new
                         {
                             Cedula = u.documento,
-                            Nombre = u.nombres,
                             Correo = u.correo,
+                            Nombre = u.nombres,
                             Dirección = u.direccion,
                             Telefono = u.telefono
                         };
@@ -69,15 +69,15 @@ namespace Modelo
         public static cocineros Buscar_Documento_Cocinero(string documento)
         {
             EntidadDataContext context = new EntidadDataContext();
-            cocineros persona = null;
+            cocineros Cocineros = null;
 
             var query = context.cocineros.Where(p => p.documento == documento).Select(p => p);
 
             if (query.Count() > 0)
             {
-                persona = query.First();
+                Cocineros = query.First();
             }
-            return persona;
+            return Cocineros;
         }
 
 

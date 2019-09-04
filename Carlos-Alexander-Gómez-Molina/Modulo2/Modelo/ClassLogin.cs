@@ -12,15 +12,15 @@ namespace Modelo
         {
             EntidadDataContext context = new EntidadDataContext();
             int userID = 0;
-            var query = context.Usuario.Where(p => p.users == user && p.pass == pass).Select(p => p);
+            var query = context.usuario.Where(p => p.Usuario1 == user && p.Clave == pass).Select(p => p);
 
-            var query1 = from p in context.Usuario
-                        where p.users == user && p.pass == pass
+            var query1 = from p in context.usuario
+                        where p.Usuario1 == user && p.Clave == pass
                         select p;
 
             if (query.Count() > 0)
             {
-                userID = query.First().id_rol;
+                userID = query.First().idRol;
             }
 
             return userID;

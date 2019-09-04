@@ -13,6 +13,7 @@ namespace Vista
         protected void Page_Load(object sender, EventArgs e)
         {
             Lista();
+            ocultarDiv();
 
         }
         protected void Lista()
@@ -21,10 +22,7 @@ namespace Vista
             GvUsuarios.DataBind();
         }
 
-        protected void btnCrudPersona_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CrudPersona.aspx");
-        }
+        
 
         protected void GvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -34,6 +32,35 @@ namespace Vista
            
 
 
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ocultarDiv()
+        {
+            Modificar.Visible = false;
+        }
+
+        private void AsignarCampos()
+        {
+            string documeto = hfDocumento.Value;
+            persona Per = Usuarios.Buscar_Documento(documeto);
+            hfPersona.Value = Per.idPersona.ToString();
+
+            txtDocumento.Text = Per.documento;
+            txtNombre.Text = Per.nombre;
+            txtTelefono.Text = Per.telefono;
+            txtDireccion.Text = Per.direccion;
+
+            Modificar.Visible = true;
         }
     }
 }
