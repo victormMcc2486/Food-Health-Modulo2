@@ -67,6 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AdminAlimentos.aspx" />
+    <Content Include="Admin\AdminCocinero.aspx" />
+    <Content Include="Admin\AdminPers.aspx" />
+    <Content Include="Admin\VerAlimentos.aspx" />
+    <Content Include="Admin\VerChef.aspx" />
+    <Content Include="Admin\VerCliente.aspx" />
+    <Content Include="Admin\VerCocinero.aspx" />
+    <Content Include="Admin\VerPers.aspx" />
+    <Content Include="Chef\MenuChef.aspx" />
+    <Content Include="Cliente\MenuCliente.aspx" />
+    <Content Include="Cocinero\MenuCocinero.aspx" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-reboot.css" />
@@ -77,37 +88,114 @@
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
-    <Content Include="ListarEmpleados.aspx" />
-    <Content Include="ListarClientes.aspx" />
-    <Content Include="ListarUsuarios.aspx" />
+    <Content Include="Admin\ListarEmpleados.aspx" />
+    <Content Include="Admin\ListarClientes.aspx" />
+    <Content Include="Admin\ListarUsuarios.aspx" />
     <Content Include="Login.aspx" />
-    <Content Include="MenuAdmin.aspx" />
+    <Content Include="Admin\MenuAdmin.aspx" />
     <Content Include="PrincipalPage.aspx" />
     <Content Include="Registrar.aspx" />
     <Content Include="template.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListarEmpleados.aspx.cs">
+    <Compile Include="Admin\AdminAlimentos.aspx.cs">
+      <DependentUpon>AdminAlimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminAlimentos.aspx.designer.cs">
+      <DependentUpon>AdminAlimentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCocinero.aspx.cs">
+      <DependentUpon>AdminCocinero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCocinero.aspx.designer.cs">
+      <DependentUpon>AdminCocinero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPers.aspx.cs">
+      <DependentUpon>AdminPers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPers.aspx.designer.cs">
+      <DependentUpon>AdminPers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ListarEmpleados.aspx.cs">
       <DependentUpon>ListarEmpleados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListarEmpleados.aspx.designer.cs">
+    <Compile Include="Admin\ListarEmpleados.aspx.designer.cs">
       <DependentUpon>ListarEmpleados.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ListarClientes.aspx.cs">
+    <Compile Include="Admin\ListarClientes.aspx.cs">
       <DependentUpon>ListarClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListarClientes.aspx.designer.cs">
+    <Compile Include="Admin\ListarClientes.aspx.designer.cs">
       <DependentUpon>ListarClientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ListarUsuarios.aspx.cs">
+    <Compile Include="Admin\ListarUsuarios.aspx.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ListarUsuarios.aspx.designer.cs">
+    <Compile Include="Admin\ListarUsuarios.aspx.designer.cs">
       <DependentUpon>ListarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VerAlimentos.aspx.cs">
+      <DependentUpon>VerAlimentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerAlimentos.aspx.designer.cs">
+      <DependentUpon>VerAlimentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VerChef.aspx.cs">
+      <DependentUpon>VerChef.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerChef.aspx.designer.cs">
+      <DependentUpon>VerChef.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VerCliente.aspx.cs">
+      <DependentUpon>VerCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerCliente.aspx.designer.cs">
+      <DependentUpon>VerCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VerCocinero.aspx.cs">
+      <DependentUpon>VerCocinero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerCocinero.aspx.designer.cs">
+      <DependentUpon>VerCocinero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\VerPers.aspx.cs">
+      <DependentUpon>VerPers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\VerPers.aspx.designer.cs">
+      <DependentUpon>VerPers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chef\MenuChef.aspx.cs">
+      <DependentUpon>MenuChef.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chef\MenuChef.aspx.designer.cs">
+      <DependentUpon>MenuChef.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cliente\MenuCliente.aspx.cs">
+      <DependentUpon>MenuCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cliente\MenuCliente.aspx.designer.cs">
+      <DependentUpon>MenuCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cocinero\MenuCocinero.aspx.cs">
+      <DependentUpon>MenuCocinero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cocinero\MenuCocinero.aspx.designer.cs">
+      <DependentUpon>MenuCocinero.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -116,11 +204,11 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MenuAdmin.aspx.cs">
+    <Compile Include="Admin\MenuAdmin.aspx.cs">
       <DependentUpon>MenuAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="MenuAdmin.aspx.designer.cs">
+    <Compile Include="Admin\MenuAdmin.aspx.designer.cs">
       <DependentUpon>MenuAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="PrincipalPage.aspx.cs">
@@ -171,6 +259,7 @@
       <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

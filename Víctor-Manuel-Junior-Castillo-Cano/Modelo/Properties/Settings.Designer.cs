@@ -33,5 +33,15 @@ namespace Modelo.Properties {
                 return ((string)(this["IngresoLoginConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QNTQFOJ;Initial Catalog=modulo2;Integrated Security=True")]
+        public string modulo2ConnectionString {
+            get {
+                return ((string)(this["modulo2ConnectionString"]));
+            }
+        }
     }
 }

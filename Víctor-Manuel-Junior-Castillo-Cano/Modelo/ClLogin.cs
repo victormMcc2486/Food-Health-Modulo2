@@ -8,20 +8,22 @@ namespace Modelo
 {
     public class ClLogin
     {
-        public static int IniciarSesion(String user, String clave)
+        public static int IniciarSesion(String user, String pass)
         {
-            EntidadesDataContext getContext = new EntidadesDataContext();
+            EntidadDataContext context = new EntidadDataContext();
+            int userID = 0;
+            var query = context.usuarios.Where(p => p.usuario == user && p.clave == pass).Select(p => p);
 
-            var query = getContext.Usuario.Where(usu => usu.Usuario1 == user && usu.Clave == clave).Select(usu => usu);
+            var query1 = from p in context.usuarios
+                        where p.usuario == user && p.clave == pass
+                        select p;
 
-            int IDRol = 0;
-
-            if(query.Count() > 0)
+            if (query.Count() > 0)
             {
-                IDRol = query.First().idRol;
+                userID = query.First().idRol;
             }
 
-            return IDRol;
+            return userID;
         }
     }
 }

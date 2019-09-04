@@ -42,11 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClAlimentos.cs" />
+    <Compile Include="ClChef.cs" />
+    <Compile Include="ClCocineros.cs" />
     <Compile Include="ClLogin.cs" />
-    <Compile Include="Entidades.designer.cs">
+    <Compile Include="ClUsuario.cs" />
+    <Compile Include="Entidad.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Entidades.dbml</DependentUpon>
+      <DependentUpon>Entidad.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -58,13 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Entidades.dbml">
+    <None Include="Entidad.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Entidades.designer.cs</LastGenOutput>
+      <LastGenOutput>Entidad.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Entidades.dbml.layout">
-      <DependentUpon>Entidades.dbml</DependentUpon>
+    <None Include="Entidad.dbml.layout">
+      <DependentUpon>Entidad.dbml</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

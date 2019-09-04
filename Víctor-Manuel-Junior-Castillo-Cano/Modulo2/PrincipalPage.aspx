@@ -43,14 +43,14 @@
                         <form runat="server">
                             <div class="form-group">
                                 <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
-                                <asp:TextBox ID="txtusuario" CssClass="form-control" placeholder="Usuario" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtUsername" CssClass="form-control" placeholder="Username" runat="server"></asp:TextBox>
                             </div>
                             <div class="form-group">
                                 <asp:Label ID="Label2" runat="server" Text="Contraseña"></asp:Label>
-                                <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
+                                <asp:TextBox ID="txtContraseña" runat="server" CssClass="form-control" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
                             </div>
                             <div class="form-group">
-                                <asp:Button ID="btnLogin" runat="server" CssClass="form-control btn btn-success" Text="Ingresar" OnClick="btnLogin_Click" />
+                                <asp:Button ID="btnIngresarLogin" runat="server" CssClass="form-control btn btn-success" Text="Ingresar" OnClick="btnIngresarLogin_Click" />
                             </div>
                         </form>
                     </div>
