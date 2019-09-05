@@ -1,7 +1,0 @@
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\bin\Debug\Modelo.dll.config
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\bin\Debug\Modelo.dll
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\bin\Debug\Modelo.pdb
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\obj\Debug\Modelo.dll
-C:\Users\Alex\Documents\Food-Health-Modulo2\Carlos-Alexander-Gómez-Molina\Modulo2\Modelo\obj\Debug\Modelo.pdb
