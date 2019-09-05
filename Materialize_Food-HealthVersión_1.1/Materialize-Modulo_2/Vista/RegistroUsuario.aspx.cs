@@ -19,10 +19,15 @@ namespace Vista
         {
             string Clave = txtClave.Text;
             string Username = txtUsername.Text;
+            string Documento = txtDocumento.Text;
+            string Correo = txtCorreo.Text;
+            string Nombres = txtNombre.Text;
+            string Direccion = txtDireccion.Text;
+            string Telefono = txtTelefono.Text;
 
-            int resultado = ClUsuario.AgregarUsuario(Username, Clave);
+            int resultadoCliente = ClUsuario.AgregarCliente(Documento, Correo, Nombres, Direccion, Telefono, Username, Clave);
 
-            switch (resultado)
+            switch (resultadoCliente)
             {
                 case 1:
                     Response.Write("<script>alert('El usuario ya existe')</script>");
@@ -42,6 +47,11 @@ namespace Vista
         {
             txtClave.Text = string.Empty;
             txtUsername.Text = string.Empty;
+            txtCorreo.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
+            txtDocumento.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtTelefono.Text = string.Empty;
         }
     }
 }

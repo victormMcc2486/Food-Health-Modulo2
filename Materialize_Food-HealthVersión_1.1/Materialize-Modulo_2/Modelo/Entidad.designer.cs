@@ -54,7 +54,7 @@ namespace Modelo
     #endregion
 		
 		public EntidadDataContext() : 
-				base(global::Modelo.Properties.Settings.Default.modulo2ConnectionString1, mappingSource)
+				base(global::Modelo.Properties.Settings.Default.modulo2ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -515,6 +515,10 @@ namespace Modelo
 		
 		private string _telefono;
 		
+		private int _idUsuario;
+		
+		private EntityRef<usuarios> _usuarios;
+		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -531,10 +535,13 @@ namespace Modelo
     partial void OndireccionChanged();
     partial void OntelefonoChanging(string value);
     partial void OntelefonoChanged();
+    partial void OnidUsuarioChanging(int value);
+    partial void OnidUsuarioChanged();
     #endregion
 		
 		public clientes()
 		{
+			this._usuarios = default(EntityRef<usuarios>);
 			OnCreated();
 		}
 		
@@ -654,6 +661,64 @@ namespace Modelo
 					this._telefono = value;
 					this.SendPropertyChanged("telefono");
 					this.OntelefonoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idUsuario", DbType="Int NOT NULL")]
+		public int idUsuario
+		{
+			get
+			{
+				return this._idUsuario;
+			}
+			set
+			{
+				if ((this._idUsuario != value))
+				{
+					if (this._usuarios.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidUsuarioChanging(value);
+					this.SendPropertyChanging();
+					this._idUsuario = value;
+					this.SendPropertyChanged("idUsuario");
+					this.OnidUsuarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_clientes", Storage="_usuarios", ThisKey="idUsuario", OtherKey="idUsuario", IsForeignKey=true)]
+		public usuarios usuarios
+		{
+			get
+			{
+				return this._usuarios.Entity;
+			}
+			set
+			{
+				usuarios previousValue = this._usuarios.Entity;
+				if (((previousValue != value) 
+							|| (this._usuarios.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._usuarios.Entity = null;
+						previousValue.clientes.Remove(this);
+					}
+					this._usuarios.Entity = value;
+					if ((value != null))
+					{
+						value.clientes.Add(this);
+						this._idUsuario = value.idUsuario;
+					}
+					else
+					{
+						this._idUsuario = default(int);
+					}
+					this.SendPropertyChanged("usuarios");
 				}
 			}
 		}
@@ -1103,6 +1168,10 @@ namespace Modelo
 		
 		private int _idRol;
 		
+		private System.Nullable<int> _estado;
+		
+		private EntitySet<clientes> _clientes;
+		
 		private EntityRef<roles> _roles;
 		
     #region Definiciones de métodos de extensibilidad
@@ -1117,10 +1186,13 @@ namespace Modelo
     partial void OnclaveChanged();
     partial void OnidRolChanging(int value);
     partial void OnidRolChanged();
+    partial void OnestadoChanging(System.Nullable<int> value);
+    partial void OnestadoChanged();
     #endregion
 		
 		public usuarios()
 		{
+			this._clientes = new EntitySet<clientes>(new Action<clientes>(this.attach_clientes), new Action<clientes>(this.detach_clientes));
 			this._roles = default(EntityRef<roles>);
 			OnCreated();
 		}
@@ -1209,6 +1281,39 @@ namespace Modelo
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_estado", DbType="Int")]
+		public System.Nullable<int> estado
+		{
+			get
+			{
+				return this._estado;
+			}
+			set
+			{
+				if ((this._estado != value))
+				{
+					this.OnestadoChanging(value);
+					this.SendPropertyChanging();
+					this._estado = value;
+					this.SendPropertyChanged("estado");
+					this.OnestadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="usuarios_clientes", Storage="_clientes", ThisKey="idUsuario", OtherKey="idUsuario")]
+		public EntitySet<clientes> clientes
+		{
+			get
+			{
+				return this._clientes;
+			}
+			set
+			{
+				this._clientes.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="roles_usuarios", Storage="_roles", ThisKey="idRol", OtherKey="idRol", IsForeignKey=true)]
 		public roles roles
 		{
@@ -1261,6 +1366,18 @@ namespace Modelo
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_clientes(clientes entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuarios = this;
+		}
+		
+		private void detach_clientes(clientes entity)
+		{
+			this.SendPropertyChanging();
+			entity.usuarios = null;
 		}
 	}
 }

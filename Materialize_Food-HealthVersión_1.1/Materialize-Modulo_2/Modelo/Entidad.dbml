@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="modulo2" Class="EntidadDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-54IKPVH;Initial Catalog=modulo2;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="modulo2ConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-75ICTL1;Initial Catalog=modulo2;Integrated Security=True" SettingsObjectName="Modelo.Properties.Settings" SettingsPropertyName="modulo2ConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.alimentos" Member="alimentos">
     <Type Name="alimentos">
       <Column Name="idAlimentos" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -27,6 +27,8 @@
       <Column Name="nombres" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
       <Column Name="direccion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="telefono" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="usuarios_clientes" Member="usuarios" ThisKey="idUsuario" OtherKey="idUsuario" Type="usuarios" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.cocineros" Member="cocineros">
@@ -59,6 +61,8 @@
       <Column Name="usuario" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="clave" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="idRol" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="usuarios_clientes" Member="clientes" ThisKey="idUsuario" OtherKey="idUsuario" Type="clientes" />
       <Association Name="roles_usuarios" Member="roles" ThisKey="idRol" OtherKey="idRol" Type="roles" IsForeignKey="true" />
     </Type>
   </Table>

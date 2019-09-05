@@ -95,7 +95,6 @@
     <Content Include="Mcss\materialize.min.css" />
     <Content Include="Mjs\materialize.js" />
     <Content Include="Mjs\materialize.min.js" />
-    <Content Include="Registrar.aspx" />
     <Content Include="RegistroUsuario.aspx" />
     <Content Include="Template.aspx" />
     <Content Include="Admin\MenuAdmin.aspx" />
@@ -192,13 +191,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Registrar.aspx.cs">
-      <DependentUpon>Registrar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Registrar.aspx.designer.cs">
-      <DependentUpon>Registrar.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroUsuario.aspx.cs">
       <DependentUpon>RegistroUsuario.aspx</DependentUpon>

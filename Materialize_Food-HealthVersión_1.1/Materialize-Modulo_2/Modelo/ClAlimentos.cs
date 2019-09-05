@@ -62,6 +62,7 @@ namespace Modelo
             return resultado;
         }
 
+
         public static alimentos Buscar_Documento_Alimentos(string nombre)
         {
             EntidadDataContext context = new EntidadDataContext();
@@ -74,6 +75,57 @@ namespace Modelo
                 Alimentos = query.First();
             }
             return Alimentos;
+        }
+
+
+
+        public static int ModificarAlimento(int id, string nombre, int tipo, string detalles)
+        {
+            int resultado = 0;
+
+            EntidadDataContext entity = new EntidadDataContext();
+
+
+            alimentos Alimentos = entity.alimentos.Where(c => c.idAlimentos == id).Select(c => c).First();
+            Alimentos.nombre = nombre;
+            Alimentos.idTipo = tipo;
+            Alimentos.detalles = detalles;
+
+            try
+            {
+                entity.SubmitChanges();
+
+                resultado = 3;
+                //Exitoooo
+            }
+            catch (Exception)
+            {
+                resultado = 2;
+                //Error al guardar
+            }
+
+            return resultado;
+        }
+
+
+        public static bool EliminarAlimento(int id)
+        {
+            EntidadDataContext entity = new EntidadDataContext();
+            bool resultado = true;
+
+            alimentos Alimentos = entity.alimentos.Where(p => p.idAlimentos == id).Select(p => p).First();
+
+            try
+            {
+                entity.alimentos.DeleteOnSubmit(Alimentos);
+                entity.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+
+            return resultado;
         }
     }
 }

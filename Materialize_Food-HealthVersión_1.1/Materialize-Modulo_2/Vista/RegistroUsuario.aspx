@@ -43,25 +43,44 @@
         </nav>
     </header>
     
-    <div class="container">
+<div class="container">
         <div class="row">
             <div class="col-12 col-md-12 mx-auto m-5">
                 <center><h1>REGISTRATE</h1></center>
                 <form runat="server">
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Usuario"></asp:Label>
-                                <asp:TextBox ID="txtUsername" CssClass="form-control" placeholder="Usuario" runat="server"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Label runat="server" Text="Contraseña"></asp:Label>
-                                <asp:TextBox ID="txtClave" runat="server" TextMode="Password" CssClass="form-control" placeholder="Contraseña"></asp:TextBox>
-                            </div>
-                            <div class="form-group">
-                                <asp:Button ID="btnRegistrar" runat="server" CssClass="form-control btn btn-danger" Text="Registrate" OnClick="btnRegistrar_Click" />
-                            </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Usuario"></asp:Label>
+                        <asp:TextBox ID="txtUsername" CssClass="form-control" placeholder="Usuario" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Contraseña"></asp:Label>
+                        <asp:TextBox ID="txtClave" runat="server" TextMode="Password" CssClass="form-control" placeholder="Contraseña"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Nombres"></asp:Label>
+                        <asp:TextBox ID="txtNombre" CssClass="form-control" placeholder="Nombres" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Documento"></asp:Label>
+                        <asp:TextBox ID="txtDocumento" runat="server" TextMode="Number" CssClass="form-control" placeholder="Documento"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Correo"></asp:Label>
+                        <asp:TextBox ID="txtCorreo" runat="server" TextMode="Email" CssClass="form-control" placeholder="Corrreo Electrónico"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Teléfono"></asp:Label>
+                        <asp:TextBox ID="txtTelefono" runat="server" TextMode="Number" CssClass="form-control" placeholder="Télefono"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Label runat="server" Text="Dirección"></asp:Label>
+                        <asp:TextBox ID="txtDireccion" runat="server" TextMode="MultiLine" CssClass="form-control" placeholder="Dirección"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <asp:Button ID="btnRegistrar" runat="server" CssClass="form-control btn btn-danger" Text="Registrate" OnClick="btnRegistrar_Click" />
+                    </div>
                 </form>
-            </div>
-            
+            </div>            
         </div>
 
     </div>

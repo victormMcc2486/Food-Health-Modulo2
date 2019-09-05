@@ -29,9 +29,8 @@
                             Administrar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="AdminPers.aspx">Chef</a>
+                            <a class="dropdown-item" href="AdminChef.aspx">Chef</a>
                             <a class="dropdown-item" href="AdminCocinero.aspx">Cocineros</a>
-                            <a class="dropdown-item" href="AdminAlimentos.aspx">Alimentos</a>
                         </div>
                      </li>
 
@@ -40,9 +39,8 @@
                             Listar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="VerPers.aspx">Chef</a>
+                            <a class="dropdown-item" href="VerChef.aspx">Chef</a>
                             <a class="dropdown-item">Cocineros</a>
-                             <a class="dropdown-item" href="VerAlimentos.aspx">Alimentos</a>
                             <a class="dropdown-item" href="VerCliente.aspx">Clientes</a>
                         </div>
                      </li>

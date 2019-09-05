@@ -28,44 +28,62 @@ namespace Modelo
 
 
         public static int AgregarCliente(string documento, string correo, string nombres,
-           string direccion, string telefono)
+           string direccion, string telefono, string usu, string clave)
         {
-            int resultado = 0;
+            int resultadoClientes = 0;
 
             EntidadDataContext entity = new EntidadDataContext();
             clientes Clientes = Buscar_Documento_Cliente(documento);
+            usuarios Usuarios = Buscar_Documento_Usuario(usu);
 
-            if (Clientes == null)
+
+
+            if (Usuarios == null)
             {
-                Clientes = new clientes();
-                Clientes.documento = documento;
-                Clientes.correo = correo;
-                Clientes.nombres = nombres;
-                Clientes.direccion = direccion;
-                Clientes.telefono = telefono;
 
+                Usuarios = new usuarios();
+                Usuarios.usuario = usu;
+                Usuarios.clave = clave;
+                Usuarios.idRol = 2;
                 try
                 {
-                    entity.clientes.InsertOnSubmit(Clientes);
+                    entity.usuarios.InsertOnSubmit(Usuarios);
                     entity.SubmitChanges();
 
-                    resultado = 3;
-                    //Exitoooo
+                    if (Clientes == null)
+                    {
+                        int idUsu = Buscar_IDUsu(usu);
+
+                        Clientes = new clientes();
+                        Clientes.documento = documento;
+                        Clientes.correo = correo;
+                        Clientes.nombres = nombres;
+                        Clientes.direccion = direccion;
+                        Clientes.telefono = telefono;
+                        Clientes.idUsuario = idUsu;
+
+                        entity.clientes.InsertOnSubmit(Clientes);
+                        entity.SubmitChanges();
+
+                        resultadoClientes = 3;
+                    }
+                    else resultadoClientes = 1;
+
                 }
                 catch (Exception)
                 {
-                    resultado = 2;
-                    //Error al guardar
+                    resultadoClientes = 2;
                 }
             }
             else
             {
-                resultado = 1;
+                resultadoClientes = 1;
                 //Ya existe en la base de datos
             }
 
-            return resultado;
+            return resultadoClientes;
         }
+
 
         public static int AgregarUsuario(string usu, string pass)
         {
@@ -130,6 +148,19 @@ namespace Modelo
                 Clientes = query.First();
             }
             return Clientes;
+        }
+        public static int Buscar_IDUsu(string usu)
+        {
+            EntidadDataContext context = new EntidadDataContext();
+            int Resultado = 0;
+
+            var query = context.usuarios.Where(p => p.usuario == usu).Select(p => p);
+
+            if (query.Count() > 0)
+            {
+                Resultado = query.First().idUsuario;
+            }
+            return Resultado;
         }
     }
 }
