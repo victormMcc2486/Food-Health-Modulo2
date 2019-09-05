@@ -162,5 +162,59 @@ namespace Modelo
             }
             return Resultado;
         }
+
+        public static int ModificarCliente(int id, string documento, string correo, string nombres,
+          string direccion, string telefono)
+        {
+            int resultado = 0;
+
+            EntidadDataContext entity = new EntidadDataContext();
+
+
+            clientes Clientes = entity.clientes.Where(c => c.idCliente == id).Select(c => c).First();
+            Clientes.documento = documento;
+            Clientes.correo = correo;
+            Clientes.nombres = nombres;
+            Clientes.direccion = direccion;
+            Clientes.telefono = telefono;
+
+            try
+            {
+                entity.SubmitChanges();
+
+                resultado = 3;
+                //Exitoooo
+            }
+            catch (Exception)
+            {
+                resultado = 2;
+                //Error al guardar
+            }
+
+            return resultado;
+        }
+
+
+        public static bool EliminarCliente(int id, int idUsuario)
+        {
+            EntidadDataContext entity = new EntidadDataContext();
+            bool resultado = true;
+
+            clientes Clientes = entity.clientes.Where(p => p.idCliente == id).Select(p => p).First();
+            usuarios Usuario = entity.usuarios.Where(p => p.idUsuario == idUsuario).Select(p => p).First();
+
+            try
+            {
+                entity.clientes.DeleteOnSubmit(Clientes);
+                entity.usuarios.DeleteOnSubmit(Usuario);
+                entity.SubmitChanges();
+            }
+            catch (Exception)
+            {
+                resultado = false;
+            }
+
+            return resultado;
+        }
     }
 }
