@@ -1,7 +1,0 @@
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\bin\Debug\Modelo.dll.config
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\bin\Debug\Modelo.dll
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\bin\Debug\Modelo.pdb
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\obj\Debug\Modelo.dll
-C:\Users\Administrador\Documents\VisualStudioProjects\Modelo\obj\Debug\Modelo.pdb
