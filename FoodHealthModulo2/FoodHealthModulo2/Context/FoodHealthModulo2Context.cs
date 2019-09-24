@@ -32,5 +32,9 @@ namespace FoodHealthModulo2.Context
         public System.Data.Entity.DbSet<FoodHealthModulo2.Models.Foods.FoodDetail> FoodDetails { get; set; }
 
         public System.Data.Entity.DbSet<FoodHealthModulo2.Models.Foods.FoodPreparation> FoodPreparations { get; set; }
+
+        public System.Data.Entity.DbSet<FoodHealthModulo2.Models.Profiles.Customer> Customers { get; set; }
+
+        public System.Data.Entity.DbSet<FoodHealthModulo2.Models.Profiles.DomentType> DomentTypes { get; set; }
     }
 }
