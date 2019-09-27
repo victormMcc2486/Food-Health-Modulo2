@@ -1,0 +1,50 @@
+﻿@model FoodHealthModulo2.Models.Foods.FoodPreparation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FoodPreparation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Food.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Food.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateMax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateMax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateMin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateMin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Details)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Details)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FoodPreparationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

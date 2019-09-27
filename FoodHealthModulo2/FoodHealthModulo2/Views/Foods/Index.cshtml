@@ -1,0 +1,48 @@
+﻿@model IEnumerable<FoodHealthModulo2.Models.Foods.Food>
+
+@{
+    ViewBag.Title = "Alimentos";
+}
+
+
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+
+        <div class="container-fluid">
+
+            <p style="padding-top:80px">
+                @Html.ActionLink("Crear Alimento", "Create", new { }, new { @class = "btn btn-success" })
+            </p>
+            <table class="table  table-striped table-dark table-bordered">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FoodType.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FoodType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.FoodID }, new { @class = "btn btn-primary" }) |
+                            @Html.ActionLink("Detalles", "Details", new { id = item.FoodID }, new { @class = "btn btn-info" }) |
+                            @Html.ActionLink("Borrar", "Delete", new { id = item.FoodID }, new { @class = "btn btn-danger" })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+    </div>
+</header>
